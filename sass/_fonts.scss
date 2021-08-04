@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Montserrat Light';
+  font-display: swap;
+  src: url('Montserrat-Light.eot');
+  src: url('Montserrat-Light.eot?#iefix') format('embedded-opentype'),
+  url('Montserrat-Light.woff') format('woff'),
+  url('Montserrat-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Regular';
+  font-display: swap;
+  src: url('Montserrat-Regular.eot');
+  src: url('Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+  url('Montserrat-Regular.woff') format('woff'),
+  url('Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+@mixin regGot {
+  font-family: 'Gotham Pro Regular';
+  font-weight: 400;
+}
+
+@mixin boldGot {
+  font-family: 'Gotham Pro Bold';
+  font-weight: 700;
+}
