@@ -8,9 +8,9 @@ body
   margin: 0
   font-size: 16px
   line-height: 18px
-  color: #212529
+  color: $white
   text-align: left
-  background-color: #fff
+  background-color: $gray-dark
   cursor: default
 
 img
@@ -27,18 +27,7 @@ a, input, button
     box-shadow: none !important
 
 a
-  position: relative
   text-decoration: none
-  &::after
-    content: ''
-    position: absolute
-    bottom: 0
-    left: 0
-    width: 100%
-    height: 2px
-    background: #000
-  &:hover
-    text-decoration: none
 
 ul
   margin: 0
@@ -88,85 +77,59 @@ input:focus:-ms-input-placeholder
   transition: opacity 0.5s ease
 
 .title
+  margin-bottom: 44px
+  font-size: 25px
+  line-height: 30px
+  color: $gray2
+  font-weight: 700
+  +mon4
 
 .subtitle
 
-// Чекбокс
-//  <label class="check">
-//    <input class="check__input" type="checkbox">
-//    <span class="check__box"></span>
-//    Жмякай
-//  </label>
-
 .check
   position: relative
-  padding-left: 35px
+  padding-left: 68px
+  font-size: 20px
+  line-height: 20px
+  color: $gray
+  transition-duration: .4s
+  &:hover
+    cursor: pointer
+    color: $white
+    transition: .4s
   &__input
     position: absolute
     appearance: none
+    transition: .4s
     &:checked + .check__box::after
-      background: red
-      transform: scale(1) translate(-50%, -50%)
+      background: #774BFF
+      left: 3px
+      transition: .4s
   &__box
     position: absolute
     top: 50%
-    width: 23px
-    height: 23px
-    margin-left: -35px
-    border: 1px solid $black
+    width: 46px
+    height: 24px
+    margin-left: -58px
+    border-radius: 37px
+    background: #666A7E
     transform: translateY(-50%)
+    transition: .4s
     &::after
       content: ''
       position: absolute
       display: block
-      width: 16px
-      height: 16px
-      left: 50%
+      width: 20px
+      height: 20px
+      right: 2px
       top: 50%
-      background-size: contain
-      transition-duration: .4s
-      transform-origin: left
-      transform: scale(0)
-
-// Радиобокс
-//  <label class="radio">
-//    <input class="radio__input" type="radio" value="option1" name="radio">
-//    <span class="radio__box"></span>
-//    Card
-//  </label>
-.radio
-  position: relative
-  padding-left: 30px
-  font-size: 18px
-  cursor: pointer
-  &__input
-    position: absolute
-    appearance: none
-    &:checked + .radio__box::after
-      background: $red
-      transform: scale(1)
-  &__box
-    position: absolute
-    top: 50%
-    width: 18px
-    height: 18px
-    border-radius: 50%
-    margin-left: -30px
-    border: 1px solid $black
-    transform: translateY(-50%)
-    &::after
-      content: ''
-      position: absolute
-      display: block
-      width: 8px
-      height: 8px
+      transform: translateY(-50%)
+      background: $gray
       border-radius: 50%
-      left: 4px
-      top: 4px
       background-size: contain
       transition-duration: .4s
-      transform-origin: center
-      transform: scale(0)
+      box-shadow: 0px -5px 7px rgba(42, 47, 72, 0.47), 0px 5px 7px #0A0B1B;
+
 
 @media (min-width:992px)
   .button
@@ -179,7 +142,3 @@ input:focus:-ms-input-placeholder
       background: $black
     &[disabled="disabled"], &[disabled]
       background: $black
-
-  .swiper
-    &-pagination
-      display: none
