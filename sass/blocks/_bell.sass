@@ -1,0 +1,69 @@
+.bell
+  &__container
+    position: absolute
+    right: 220px
+    top: 123px
+    padding: 26px 22px
+    padding-right: 10px
+    background: #292F39
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
+    border-radius: 18px
+    z-index: 10
+
+    transition: .4s
+    transform: translateY(-10%)
+    opacity: 0
+    pointer-events: none
+    &.active
+      transform: translateY(0)
+      opacity: 1
+      pointer-events: auto
+  &__message
+    overflow-y: auto
+    width: 300px
+    height: 355px
+    padding-right: 20px
+    &::-webkit-scrollbar
+      width: 6px
+  &__item
+    position: relative
+    display: flex
+    align-items: center
+    padding-top: 18px
+    padding-bottom: 10px
+    &::after
+      content: ''
+      position: absolute
+      left: 0
+      bottom: 0
+      width: 100%
+      height: 1px
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.34) 52.35%, rgba(255, 255, 255, 0) 99.52%)
+
+  &__img
+    position: absolute
+    left: 0
+    top: 20px
+    width: 28px
+    height: 28px
+  &__text
+    padding-left: 46px
+    p
+      margin: 0
+      font-weight: 500
+      font-size: 11px
+      line-height: 13px
+      +mon4
+    span
+      font-weight: 500
+      font-size: 9px
+      line-height: 11px
+      +mon4
+  &__flex
+    white-space: nowrap
+    font-weight: bold
+    font-size: 14px
+    line-height: 17px
+    +mon4
+    color: $white
+    transform: rotate(0.69deg)

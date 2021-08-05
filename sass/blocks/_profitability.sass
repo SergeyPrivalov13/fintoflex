@@ -1,0 +1,147 @@
+.profitability
+  width: 100%
+  padding-left: 40px
+  &-header
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    &__item
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      width: 100%
+      max-width: 31%
+      height: 173px
+      margin-bottom: 40px
+      padding: 14px
+      background: #373D47
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12)
+      border-radius: 18px
+      span
+        font-size: 14px
+        line-height: 17px
+        color: #D1D1D1
+        +mon4
+      p
+        margin: 0
+        font-weight: 400
+        font-size: 30px
+        line-height: 45px
+        +pop3
+        background: linear-gradient(180deg, #E9B9E9 0%, #FFFFFF 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        color: $white
+      &.active
+        p
+          font-weight: 600
+          background: linear-gradient(180deg, rgba(226, 174, 255, 0.66) 0%, #FC54FF 100%)
+          -webkit-background-clip: text
+          -webkit-text-fill-color: transparent
+          color: $white
+  &-footer
+    border: 1px solid
+    
+    &__img
+      position: absolute
+      right: 0
+      bottom: -6px
+      z-index: -1
+    &__item
+      position: relative
+      filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.12));
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      width: 456px
+      height: 354px
+      margin-right: 20px
+      padding: 48px 38px 34px 38px
+      background: linear-gradient(0deg, #383E49, #383E49)
+      border-radius: 18px
+    &__button
+      max-width: 166px
+      width: 100%
+    &__title
+      margin: 0
+      margin-bottom: 18px
+      font-size: 40px
+      line-height: 33px
+      color: #EAEAEA
+      text-transform: uppercase
+      +pop3
+      font-weight: 300
+      span
+        +pop7
+    &__subtitle
+      display: block
+      margin: 0
+      margin-bottom: 30px
+      +pop3
+      font-size: 14px
+      line-height: 21px
+      color: $white
+    &__content
+      margin-bottom: 16px
+      p
+        margin: 0
+        margin-bottom: 4px
+        font-size: 14px
+        line-height: 10px
+        color: #78808D
+        transform: matrix(1, 0.01, -0.02, 1, 0, 0)
+        +pop7
+      span
+        font-weight: 300
+        font-size: 18px
+        line-height: 27px
+        text-transform: uppercase
+        color: #D1D1D1
+        +pop3
+    &__property
+      font-weight: 500
+      font-size: 10px
+      line-height: 15px
+      color: #78808D
+
+
+@media screen and ( max-width: 1600px )
+  .profitability
+    padding-left: 30px
+    &-header
+      &__item
+        p
+          font-size: 26px
+
+@media screen and ( max-width: 1400px )
+  .profitability
+    padding-left: 30px
+    padding-right: 0
+    &-header
+      &__item
+        max-width: 48%
+        height: 106px
+        margin-bottom: 18px
+        &:nth-child(6), &:nth-child(5)
+          margin-bottom: 0  
+        p
+          font-size: 26px
+  .content
+    padding-right: 36px
+    &-main
+      padding-left: 36px
+
+@media screen and ( max-width: 1200px )
+  .profitability
+    padding-left: 20px
+    &-header
+      &__item        
+        p
+          font-size: 22px
+  .content
+    padding-right: 26px
+    &-main
+      padding-left: 26px
+
+  

@@ -1,13 +1,15 @@
 .content
   width: 100%
-  padding-top: 40px
   padding-right: 68px
   &__header
     position: relative
+    z-index: 1
     display: flex
     align-items: center
     justify-content: flex-end
-    padding-bottom: 6px
+    padding-bottom: 12px
+    padding-top: 40px
+    background: $gray-dark
     &::after
       content: ''
       position: absolute
@@ -18,11 +20,12 @@
       background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.06) 11%, rgba(255, 255, 255, 0) 125%)
 
   &-main
-    padding: 44px
+    padding: 40px 50px
+    padding-right: 0
     &__gains
       display: flex
       justify-content: space-between
-      flex-wrap: wrap
+      flex-wrap: nowrap
 
 .language
   position: relative
@@ -30,6 +33,7 @@
   padding-right: 26px
   font-weight: 300
   color: $white
+  +mon4
   &::after
     content: ''
     position: absolute
@@ -58,6 +62,8 @@
       height: 13px
       border-radius: 50%
       background: $pink
+    &:hover
+      cursor: pointer
 
 .user
   display: flex
@@ -96,3 +102,14 @@
   &:hover
     svg
       fill: rgba($white, .8 )
+
+@media screen and ( max-width: 992px )
+  .language
+    display: none
+  .user
+    display: none
+  .content
+    &__header
+      justify-content: space-between
+      &::after
+        display: none

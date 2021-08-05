@@ -5,6 +5,7 @@
   outline: none
 
 body
+  position: relative
   margin: 0
   font-size: 16px
   line-height: 18px
@@ -13,10 +14,34 @@ body
   background-color: $gray-dark
   cursor: default
 
+::-webkit-scrollbar
+  width: 12px 
+
+::-webkit-scrollbar-track
+  background: rgba(56, 62, 73, 0.56)
+  border-radius: 116px
+  transform: rotate(-90deg)
+
+::-webkit-scrollbar-thumb
+  background: #292F39
+  border-radius: 18px
+  transform: rotate(-90deg)
+  border: 2px solid rgba(56, 62, 73, 0.56)
+
 img
   max-width: 100%
 
 .button
+  border: none
+  height: 35px
+  padding: 0 16px
+  background: #7635FF
+  border-radius: 18px
+  font-size: 14px
+  line-height: 17px
+  font-weight: 700
+  color: $white
+  +mon4
   &:focus
     outline: none
 
@@ -77,7 +102,8 @@ input:focus:-ms-input-placeholder
   transition: opacity 0.5s ease
 
 .title
-  margin-bottom: 44px
+  margin: 0
+  margin-bottom: 46px
   font-size: 25px
   line-height: 30px
   color: $gray2
@@ -89,10 +115,11 @@ input:focus:-ms-input-placeholder
 .check
   position: relative
   padding-left: 68px
-  font-size: 20px
+  font-size: 16px
   line-height: 20px
   color: $gray
   transition-duration: .4s
+  +mon4
   &:hover
     cursor: pointer
     color: $white
@@ -128,8 +155,7 @@ input:focus:-ms-input-placeholder
       border-radius: 50%
       background-size: contain
       transition-duration: .4s
-      box-shadow: 0px -5px 7px rgba(42, 47, 72, 0.47), 0px 5px 7px #0A0B1B;
-
+      box-shadow: 0px -5px 7px rgba(42, 47, 72, 0.47), 0px 5px 7px #0A0B1B
 
 @media (min-width:992px)
   .button
