@@ -3,7 +3,7 @@
   padding-right: 68px
   &__header
     position: relative
-    z-index: 1
+    z-index: 3
     display: flex
     align-items: center
     justify-content: flex-end
@@ -93,6 +93,8 @@
       line-height: 17px
       +mon4
       font-weight: 500
+  &.mob
+    display: none
 
 .exit
   margin-left: 20px
@@ -107,9 +109,32 @@
   .language
     display: none
   .user
-    display: none
+    &.pc
+      display: none
+    &.mob
+      display: flex
+      justify-content: space-between
   .content
     &__header
+      position: fixed
+      width: 100%
       justify-content: space-between
+      
       &::after
         display: none
+
+@media screen and ( max-width: 768px )
+  .content
+    &-main
+      &__gains
+        flex-wrap: wrap
+        justify-content: center
+      
+  .profitability
+    padding-left: 0 !important
+
+@media screen and ( max-width: 576px )
+  .content
+    padding-right: 15px !important
+  
+  

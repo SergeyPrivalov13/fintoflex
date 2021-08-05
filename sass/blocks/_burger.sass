@@ -1,10 +1,11 @@
 .burger
+  display: none
   position: relative
   width: 24px
   height: 24px
   margin: 0
   padding: 0
-  border: 1px solid
+  border: none
   background: transparent
   span
     position: absolute
@@ -17,7 +18,7 @@
     &:nth-child(1)
       top: 0
     &:nth-child(2)
-      top: 10px
+      top: 11px
       width: 14px
       pointer-events: auto
     &:nth-child(3)
@@ -35,3 +36,10 @@
       &:nth-child(3)
         bottom: calc(50% - 1px)
         transform: rotate(-45deg)
+
+
+@media screen and ( max-width: 992px )
+  .burger
+    display: block
+    right: 30px
+  

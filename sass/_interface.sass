@@ -13,9 +13,32 @@ body
   text-align: left
   background-color: $gray-dark
   cursor: default
+  &.atv
+    overflow: hidden
+  &.active
+    overflow: hidden
+
+.substrate
+  position: absolute
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  height: 550%
+  background: rgba(0, 0, 0, 0.52)
+  z-index: 4
+  opacity: 0
+  transition: opacity .4s
+  pointer-events: none
+  transform: scale(0)
+  transform-origin: center
+  &.active
+    opacity: 1
+    pointer-events: auto
+    transform: scale(1)
 
 ::-webkit-scrollbar
-  width: 12px 
+  width: 12px
 
 ::-webkit-scrollbar-track
   background: rgba(56, 62, 73, 0.56)
@@ -168,3 +191,9 @@ input:focus:-ms-input-placeholder
       background: $black
     &[disabled="disabled"], &[disabled]
       background: $black
+
+@media screen and ( max-width: 576px )
+  .check
+    padding-left: 52px
+    font-size: 14px
+  

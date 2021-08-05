@@ -67,3 +67,19 @@
     +mon4
     color: $white
     transform: rotate(0.69deg)
+
+@media screen and ( max-width: 992px )
+  .bell
+    &__container
+      position: fixed
+      top: 50%
+      right: auto
+      left: 50%
+      transform: translate(-50%, -100%)
+      &.active
+        transform: translate(-50%, -50%)
+
+@media only screen and (min-width: 320px) and (max-width: 768px) and (orientation: landscape)
+  .bell
+    &__message
+      height: 250px

@@ -49,6 +49,18 @@
       width: 28px
       margin-right: 20px
       transition: .6s
+  &__logo
+    display: none
+  &__lang
+    display: none
+    position: absolute
+    left: 12px
+    top: -37px
+    font-weight: 300
+    font-size: 14px
+    line-height: 17px
+    text-transform: uppercase
+    +mon4
 
 .logo
   padding-bottom: 106px
@@ -57,6 +69,8 @@
   position: relative
   padding-top: 100px
   padding-bottom: 40px
+  &-set
+    display: none
   &::after
     content: ''
     position: absolute
@@ -123,3 +137,83 @@
       width: 28px
       margin-right: 20px
       transition: .6s
+
+@media screen and ( max-width: 992px )
+  .saidbar
+    position: fixed
+    z-index: 10
+    right: 0
+    top: 0
+    margin-top: 100px
+    padding: 30px 20px
+    background: $gray-dark
+    max-width: 100%
+    width: 50%
+    height: fit-content
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12)
+    border-radius: 18px 0 0 18px
+    transition: .4s
+    transform: scaleX(0.7)
+    opacity: 0
+    transform-origin: right
+    pointer-events: none
+    &.active
+      transform: scaleX(1)
+      opacity: 1
+      pointer-events: auto
+
+    &__settings
+      display: none
+    &__logo
+      display: block
+      a
+        img
+          height: 28px
+    &__footer
+      position: relative
+      display: flex
+      align-items: center
+      justify-content: space-between
+    &__lang
+      display: block
+  .logo
+    display: none
+  .menu
+    padding-top: 40px
+    padding-bottom: 90px
+    &-set
+      display: block
+    &::after
+      display: none
+    li
+      a
+        padding: 20px
+        &::before
+          display: none
+
+@media screen and ( max-width: 768px )
+  .saidbar
+    width: 65%
+    
+@media screen and ( max-width: 576px )
+  .saidbar
+    width: 100%
+    box-shadow: none
+    height: 750px
+    overflow-y: auto
+    padding-bottom: 300px
+    &__logo
+      a
+        img
+          height: 18px
+  .menu
+    li
+      a
+        font-size: 16px
+  
+@media only screen and (min-width: 320px) and (max-width: 768px) and (orientation: landscape)
+  .saidbar
+    height: 750px
+    overflow-y: auto
+    padding-bottom: 550px
+
