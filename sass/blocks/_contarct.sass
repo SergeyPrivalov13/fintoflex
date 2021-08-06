@@ -1,0 +1,58 @@
+.contarct
+  &__container
+    display: flex
+    justify-content: flex-start
+    flex-wrap: wrap
+  &__item
+    width: 217px
+    height: 289px
+    margin-right: 28px
+    margin-bottom: 28px
+    padding: 27px 13px
+    background: #373D47
+    border-radius: 18px
+    &:last-child
+      margin-right: 0
+  &__title
+    margin: 0
+    margin-bottom: 16px
+    font-weight: bold
+    font-size: 20px
+    line-height: 24px
+  &__information
+    display: flex
+    justify-content: space-between
+    margin-bottom: 20px
+  &__left
+    font-size: 12px
+    line-height: 15px
+    color: #D1D1D1
+  &__right
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+  &__total
+    margin: 0
+    margin-bottom: 4px
+    text-align: center
+    background: linear-gradient(180deg, rgba(226, 174, 255, 0.66) 0%, #FC54FF 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    font-size: 20px
+    line-height: 24px
+    +mon7
+  &__button
+    font-weight: 300
+    width: 100%
+    height: 28px
+    background: transparent
+    border: 1px solid #777777
+
+@media screen and ( min-width: 992px )
+  .contarct
+    &__button
+      transition: .4s
+      &:hover
+        background: #8000FF
+        border: 1px solid #8000FF
+        cursor: pointer
