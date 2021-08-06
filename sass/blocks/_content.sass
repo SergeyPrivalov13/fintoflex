@@ -1,6 +1,8 @@
 .content
   width: 100%
   padding-right: 68px
+  overflow: hidden
+  overflow-y: auto
   &__header
     position: relative
     z-index: 3
@@ -105,6 +107,16 @@
     svg
       fill: rgba($white, .8 )
 
+@media screen and ( max-width: 1200px )
+  .content
+    &-main
+      &__gains
+        flex-wrap: wrap
+        justify-content: center
+  .profitability
+    padding-left: 0 !important
+
+
 @media screen and ( max-width: 992px )
   .language
     display: none
@@ -118,20 +130,12 @@
     &__header
       position: fixed
       width: 100%
-      justify-content: space-between
-      
+      justify-content: space-between      
       &::after
         display: none
 
-@media screen and ( max-width: 768px )
-  .content
-    &-main
-      &__gains
-        flex-wrap: wrap
-        justify-content: center
+
       
-  .profitability
-    padding-left: 0 !important
 
 @media screen and ( max-width: 576px )
   .content
