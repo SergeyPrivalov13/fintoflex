@@ -88,9 +88,12 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
 
       // Закрывает select если кликнули мимо
       const selectSingle = document.querySelector('.__select');
-      if (!target.closest('.__select__content') && !target.closest('.__select__title')){
-        selectSingle.setAttribute('data-state', '');
-      } 
+      if(selectSingle) {
+        if (!target.closest('.__select__content') && !target.closest('.__select__title')){
+          selectSingle.setAttribute('data-state', '');
+        }
+
+      }
       
 
 
@@ -115,11 +118,11 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
 
   const select = () => {
     const selectBox = document.querySelector('.select-box');
-    const selectSingle = document.querySelector('.__select');
-    const selectSingle_title = selectSingle.querySelector('.__select__title');
-    const selectSingle_labels = selectSingle.querySelectorAll('.__select__label');
-
+    
     if(selectBox) {
+      const selectSingle = document.querySelector('.__select');
+      const selectSingle_title = selectSingle.querySelector('.__select__title');
+      const selectSingle_labels = selectSingle.querySelectorAll('.__select__label');
       // Toggle menu
       selectSingle_title.addEventListener('click', () => {
         if ('active' === selectSingle.getAttribute('data-state')) {

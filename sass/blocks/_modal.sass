@@ -1,0 +1,34 @@
+.modal
+  width: 445px
+  margin: 0 auto
+  padding: 36px 3%
+  background: #343943
+  border-radius: 18px
+  display: flex
+  flex-direction: column
+  align-items: center
+  &__text
+    font-weight: bold
+    font-size: 18px
+    line-height: 22px
+    color: #EAEAEA
+  &__sum
+    margin: 0
+    margin-bottom: 33px
+    background: linear-gradient(180deg, rgba(226, 174, 255, 0.66) 0%, #FC54FF 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    font-weight: bold
+    font-size: 30px
+    line-height: 30px
+    +mon7
+    span
+      font-weight: 300
+      +mon4
+  &__button
+    width: 160px
+
+@media screen and ( max-width: 480px )
+  .modal
+    width: 100%
+  
