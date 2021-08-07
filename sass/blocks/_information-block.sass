@@ -1,0 +1,63 @@
+.information-block
+  &__item
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &.dep
+      p
+        color: $white
+      .information-block__right
+        color: #FFEDFF
+  &__left
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    //max-width: 324px
+    p
+      //white-space: nowrap
+      margin-right: 6px
+      font-size: 14px
+      line-height: 17px
+      font-weight: 300
+      color: rgba(255, 255, 255, 0.53)
+      transform: rotate(0.69deg)
+  &__hr
+    position: relative
+    width: 100%
+    max-width: 108px
+    background: transparent
+    color: transparent
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 2px
+      background: linear-gradient(-90deg, #774BFF 0%, rgba(255, 255, 255, 0.06) 71.01%, rgba(255, 255, 255, 0) 99.52%)
+
+  &__right
+    margin-left: 30px
+    white-space: nowrap
+    width: 120px
+    text-align: right
+    font-size: 14px
+    line-height: 17px
+    font-weight: bold
+    color: rgba(255, 255, 255, 0.53)
+    transform: rotate(0.69deg)
+    &.bold
+      color: #FFEDFF
+
+@media screen and ( max-width: 576px )
+
+  .information-block
+    &__left
+      p
+        font-size: 12px
+        line-height: 15px
+        margin-right: 0
+        margin-top: 10px
+        margin-bottom: 10px
+    &__right
+      margin-left: 10px
+      margin-right: 6px

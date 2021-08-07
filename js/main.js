@@ -9,10 +9,10 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
     const more = document.querySelector('.gains-more');
 
 
-    if(progress) {
+    if (progress) {
       progress.addEventListener('click', () => {
         let text = progress.textContent;
-  
+
         if (!more.classList.contains('active')) {
           more.classList.add('active');
           progress.textContent = progress.textContent.replace('Прогресс достижений', 'Свернуть');
@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
           more.classList.remove('active');
           progress.textContent = progress.textContent.replace('Свернуть', 'Прогресс достижений');
         }
-  
+
       });
     }
 
@@ -45,7 +45,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
           substrate.classList.remove('active');
           body.classList.remove('active');
         }
-  
+
         if (target.closest('.bell__container')) {
           elem.classList.add('active');
           substrate.classList.add('active');
@@ -71,28 +71,30 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
       const btn = document.querySelector('.burger');
       const saidbar = document.querySelector('.saidbar');
 
-
       if (target.closest('.burger')) {
         btn.classList.toggle('cls');
         saidbar.classList.toggle('active');
         body.classList.toggle('atv');
-        console.log(1);
       } else {
         btn.classList.remove('cls');
         saidbar.classList.remove('active');
         body.classList.remove('atv');
-        console.log(2);
       }
       if (target.closest('.saidbar')) {
         btn.classList.add('cls');
         saidbar.classList.add('active');
         body.classList.add('atv');
-        console.log(3);
       }
+
+      // Закрывает select если кликнули мимо
+      const selectSingle = document.querySelector('.__select');
+      if (!target.closest('.__select__content') && !target.closest('.__select__title')){
+        selectSingle.setAttribute('data-state', '');
+      } 
+      
+
+
     })
-
-
-
   };
   addClass();
 
@@ -100,7 +102,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
     const contentHeader = document.querySelector('.content__header').clientHeight;
     const saidAct = document.querySelector('.saidbar');
     const contentMain = document.querySelector('.content-main');
-    if(screenWidth < 992) {
+    if (screenWidth < 992) {
       saidAct.style.cssText = `
         margin-top: ${contentHeader - 2}px;
       `;
@@ -110,5 +112,34 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
     }
   }
   addMarg()
+
+  const select = () => {
+    const selectBox = document.querySelector('.select-box');
+    const selectSingle = document.querySelector('.__select');
+    const selectSingle_title = selectSingle.querySelector('.__select__title');
+    const selectSingle_labels = selectSingle.querySelectorAll('.__select__label');
+
+    if(selectBox) {
+      // Toggle menu
+      selectSingle_title.addEventListener('click', () => {
+        if ('active' === selectSingle.getAttribute('data-state')) {
+          selectSingle.setAttribute('data-state', '');
+        } else {
+          selectSingle.setAttribute('data-state', 'active');
+        }
+      });
+  
+      // Close when click to option
+      for (let i = 0; i < selectSingle_labels.length; i++) {
+        selectSingle_labels[i].addEventListener('click', (evt) => {
+          selectSingle_title.textContent = evt.target.textContent;
+          selectSingle.setAttribute('data-state', '');
+          selectSingle_title.classList.add('act');
+        });
+      } 
+      
+    }
+  }
+  select();
 
 });
