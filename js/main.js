@@ -9,18 +9,20 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
     const more = document.querySelector('.gains-more');
 
 
-    progress.addEventListener('click', () => {
-      let text = progress.textContent;
-
-      if (!more.classList.contains('active')) {
-        more.classList.add('active');
-        progress.textContent = progress.textContent.replace('Прогресс достижений', 'Свернуть');
-      } else {
-        more.classList.remove('active');
-        progress.textContent = progress.textContent.replace('Свернуть', 'Прогресс достижений');
-      }
-
-    })
+    if(progress) {
+      progress.addEventListener('click', () => {
+        let text = progress.textContent;
+  
+        if (!more.classList.contains('active')) {
+          more.classList.add('active');
+          progress.textContent = progress.textContent.replace('Прогресс достижений', 'Свернуть');
+        } else {
+          more.classList.remove('active');
+          progress.textContent = progress.textContent.replace('Свернуть', 'Прогресс достижений');
+        }
+  
+      });
+    }
 
   }
   progress();
@@ -64,8 +66,6 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
       }
 
 
-
-
       // Меню
 
       const btn = document.querySelector('.burger');
@@ -89,10 +89,6 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
         body.classList.add('atv');
         console.log(3);
       }
-
-
-
-
     })
 
 
@@ -103,11 +99,14 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
   const addMarg = () => {
     const contentHeader = document.querySelector('.content__header').clientHeight;
     const saidAct = document.querySelector('.saidbar');
+    const contentMain = document.querySelector('.content-main');
     if(screenWidth < 992) {
       saidAct.style.cssText = `
-        margin-top: ${contentHeader}px;
+        margin-top: ${contentHeader - 2}px;
+      `;
+      contentMain.style.cssText = `
+        margin-top: ${contentHeader - 2}px;
       `
-
     }
   }
   addMarg()

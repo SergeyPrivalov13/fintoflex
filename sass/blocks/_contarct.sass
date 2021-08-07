@@ -1,24 +1,28 @@
 .contarct
+  margin-bottom: 50px
+  &__box
+    overflow-y: auto
+    &::-webkit-scrollbar
+      width: 0
+      height: 0
   &__container
     display: flex
     justify-content: flex-start
-    flex-wrap: wrap
+    width: 1480px
   &__item
     width: 217px
     height: 289px
     margin-right: 28px
-    margin-bottom: 28px
     padding: 27px 13px
     background: #373D47
     border-radius: 18px
-    &:last-child
-      margin-right: 0
   &__title
     margin: 0
     margin-bottom: 16px
     font-weight: bold
     font-size: 20px
     line-height: 24px
+    text-transform: uppercase
   &__information
     display: flex
     justify-content: space-between
@@ -56,3 +60,7 @@
         background: #8000FF
         border: 1px solid #8000FF
         cursor: pointer
+
+@media screen and ( max-width: 576px )
+  .contarct
+    margin-bottom: 30px
