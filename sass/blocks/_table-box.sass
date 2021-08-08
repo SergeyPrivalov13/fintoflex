@@ -1,5 +1,6 @@
 .table-box
   overflow-y: auto
+  border-radius: 18px
   &__container
     width: 1016px
     margin-bottom: 14px
@@ -28,7 +29,40 @@
       font-size: 15px
       line-height: 18px
       color: $white
+    &.four
+      p
+        width: 15%
     &.head
       p
         font-weight: bold
         color: #868686
+  &__issue
+    display: flex
+    justify-content: flex-end
+    margin-top: 30px
+    &>div
+      width: 232px
+  &__total
+    display: flex
+    align-items: center
+    justify-content: space-between
+    font-size: 20px
+    line-height: 30px
+    color: rgba(255, 255, 255, 0.53)
+    transform: rotate(0.69deg)
+    span
+      background: rgba(255, 137, 203, 1)
+      font-weight: bold
+      font-size: 18px
+      line-height: 27px
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      +pop7
+  &__button
+    width: 100%
+
+@media screen and ( max-width: 576px )
+  .table-box
+    &__issue
+      &>div
+        width: 100%
