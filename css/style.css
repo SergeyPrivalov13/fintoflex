@@ -153,7 +153,7 @@ ul li { list-style: none; }
 
 .__select__title { font-weight: bold; }
 
-.m-4 { margin-bottom: 40px; }
+.m-4 { margin-bottom: 30px; }
 
 .block-subtile { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; margin-bottom: 36px; }
 
@@ -869,6 +869,8 @@ input[type=tel]:focus, input[type=text]:focus { border: none; }
 
 .information-block__right.pnk { color: #FF89CB; }
 
+.information-block__right.retail { color: rgba(255, 255, 255, 0.67); -webkit-transform: matrix(1, 0.01, -0.02, 1, 0, 0); transform: matrix(1, 0.01, -0.02, 1, 0, 0); text-decoration: line-through; }
+
 @media screen and (max-width: 576px) { .information-block__left p { font-size: 12px; line-height: 15px; margin-right: 0; margin-top: 10px; margin-bottom: 10px; }
   .information-block__right { margin-left: 10px; margin-right: 6px; } }
 
@@ -904,7 +906,7 @@ input[type=tel]:focus, input[type=text]:focus { border: none; }
 
 .modal.__bk { position: relative; top: -35px; }
 
-.modal__text { font-weight: bold; font-size: 18px; line-height: 22px; color: #EAEAEA; text-align: center; }
+.modal__text { margin-top: 0; font-weight: bold; font-size: 18px; line-height: 22px; color: #EAEAEA; text-align: center; }
 
 .modal__sum { margin: 0; margin-bottom: 33px; background: -webkit-gradient(linear, left top, left bottom, from(rgba(226, 174, 255, 0.66)), to(#FC54FF)); background: linear-gradient(180deg, rgba(226, 174, 255, 0.66) 0%, #FC54FF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; font-size: 30px; line-height: 30px; font-family: 'Montserrat Bold', sans-serif; }
 
@@ -917,6 +919,8 @@ input[type=tel]:focus, input[type=text]:focus { border: none; }
 .modal__info { font-size: 14px; line-height: 17px; color: #EAEAEA; text-align: center; margin-bottom: 40px; }
 
 .modal__product { margin: 0; margin-bottom: 32px; font-size: 25px; line-height: 28px; color: #EAEAEA; text-transform: uppercase; }
+
+.modal__name { margin: 0; font-size: 14px; line-height: 21px; font-family: 'Poppins Light', sans-serif; }
 
 .modal.ok { padding-bottom: 70px; padding-top: 90px; }
 
