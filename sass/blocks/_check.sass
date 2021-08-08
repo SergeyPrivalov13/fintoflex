@@ -1,0 +1,49 @@
+.check
+  position: relative
+  padding-left: 68px
+  font-size: 16px
+  line-height: 20px
+  color: $gray
+  transition-duration: .4s
+  +mon4
+  &:hover
+    cursor: pointer
+    color: $white
+    transition: .4s
+  &__input
+    position: absolute
+    appearance: none
+    transition: .4s
+    &:checked + .check__box::after
+      background: #774BFF
+      left: 3px
+      transition: .4s
+  &__box
+    position: absolute
+    top: 50%
+    width: 46px
+    height: 24px
+    margin-left: -58px
+    border-radius: 37px
+    background: #666A7E
+    transform: translateY(-50%)
+    transition: .4s
+    &::after
+      content: ''
+      position: absolute
+      display: block
+      width: 20px
+      height: 20px
+      right: 2px
+      top: 50%
+      transform: translateY(-50%)
+      background: $gray
+      border-radius: 50%
+      background-size: contain
+      transition-duration: .4s
+      box-shadow: 0px -5px 7px rgba(42, 47, 72, 0.47), 0px 5px 7px #0A0B1B
+
+@media screen and ( max-width: 576px )
+  .check
+    padding-left: 52px
+    font-size: 14px

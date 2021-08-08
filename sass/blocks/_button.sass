@@ -1,0 +1,42 @@
+.button
+  border: none
+  height: 35px
+  padding: 0 16px
+  background: #7635FF
+  border-radius: 18px
+  font-size: 14px
+  line-height: 17px
+  font-weight: 700
+  color: $white
+  +mon4
+  &:focus
+    outline: none
+  &.transp
+    background: #373D47
+    border: 1px solid #666A6F
+    box-sizing: border-box
+
+
+@media (min-width:992px)
+  .button
+    &:hover
+      transition-duration: 500ms
+      cursor: pointer
+    &[disabled="disabled"], &[disabled]
+      cursor: default
+    &:active
+      background: $black
+    &[disabled="disabled"], &[disabled]
+      background: $black
+    &.transp
+      &:hover
+        background: #7635FF
+        border: 1px solid #7635FF
+
+
+
+@media screen and ( max-width: 576px )
+  .button
+    font-size: 12px
+    line-height: 15px
+    height: 23px

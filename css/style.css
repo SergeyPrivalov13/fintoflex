@@ -137,10 +137,6 @@ body.active { overflow: hidden; }
 
 img { max-width: 100%; }
 
-.button { border: none; height: 35px; padding: 0 16px; background: #7635FF; border-radius: 18px; font-size: 14px; line-height: 17px; font-weight: 700; color: #ffffff; font-family: 'Montserrat Regular', sans-serif; }
-
-.button:focus { outline: none; }
-
 a, input, button { outline: none; }
 
 a:focus, input:focus, button:focus { outline: none; -webkit-box-shadow: none !important; box-shadow: none !important; }
@@ -155,30 +151,11 @@ ul li { list-style: none; }
 
 .subtitle { font-size: 25px; line-height: 30px; font-weight: normal; font-family: 'Montserrat Regular', sans-serif; }
 
-.check { position: relative; padding-left: 68px; font-size: 16px; line-height: 20px; color: #78808D; -webkit-transition-duration: .4s; transition-duration: .4s; font-family: 'Montserrat Regular', sans-serif; }
-
-.check:hover { cursor: pointer; color: #ffffff; -webkit-transition: .4s; transition: .4s; }
-
-.check__input { position: absolute; -webkit-appearance: none; -moz-appearance: none; appearance: none; -webkit-transition: .4s; transition: .4s; }
-
-.check__input:checked + .check__box::after { background: #774BFF; left: 3px; -webkit-transition: .4s; transition: .4s; }
-
-.check__box { position: absolute; top: 50%; width: 46px; height: 24px; margin-left: -58px; border-radius: 37px; background: #666A7E; -webkit-transform: translateY(-50%); transform: translateY(-50%); -webkit-transition: .4s; transition: .4s; }
-
-.check__box::after { content: ''; position: absolute; display: block; width: 20px; height: 20px; right: 2px; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); background: #78808D; border-radius: 50%; background-size: contain; -webkit-transition-duration: .4s; transition-duration: .4s; -webkit-box-shadow: 0px -5px 7px rgba(42, 47, 72, 0.47), 0px 5px 7px #0A0B1B; box-shadow: 0px -5px 7px rgba(42, 47, 72, 0.47), 0px 5px 7px #0A0B1B; }
-
 .__select__title { font-family: 'Montserrat Bold', sans-serif; }
 
 .m-4 { margin-bottom: 40px; }
 
-@media (min-width: 992px) { .button:hover { -webkit-transition-duration: 500ms; transition-duration: 500ms; cursor: pointer; }
-  .button[disabled="disabled"], .button[disabled] { cursor: default; }
-  .button:active { background: #000000; }
-  .button[disabled="disabled"], .button[disabled] { background: #000000; } }
-
-@media screen and (max-width: 576px) { .check { padding-left: 52px; font-size: 14px; }
-  .button { font-size: 12px; line-height: 15px; height: 23px; }
-  .subtitle { font-size: 16px; line-height: 18px; }
+@media screen and (max-width: 576px) { .subtitle { font-size: 16px; line-height: 18px; }
   .title { margin-bottom: 30px; font-size: 16px; line-height: 18px; }
   ::-webkit-scrollbar { width: 8px; }
   ::-webkit-scrollbar-thumb { border: 3px solid rgba(56, 62, 73, 0.56); }
@@ -613,9 +590,9 @@ ul li { list-style: none; }
 
 .profitability-footer__img.home img { width: 260px; height: 260px; border-radius: 0 0 18px 0; }
 
-.profitability-footer__img.check img { width: 200px; height: 200px; }
+.profitability-footer__img.chk img { width: 200px; height: 200px; }
 
-.profitability-footer__item { position: relative; -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.12)); filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.12)); display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; width: 456px; height: 354px; margin-right: 20px; padding: 48px 38px 34px 38px; background: -webkit-gradient(linear, left bottom, left top, from(#383E49), to(#383E49)); background: linear-gradient(0deg, #383E49, #383E49); border-radius: 18px; }
+.profitability-footer__item { position: relative; -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.12)); filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.12)); display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; width: 456px; height: 354px; margin-right: 20px; padding: 48px 38px 34px 38px; background: -webkit-gradient(linear, left bottom, left top, from(#383E49), to(#383E49)); background: linear-gradient(0deg, #383E49, #383E49); border-radius: 18px; overflow: hidden; }
 
 .profitability-footer__button { max-width: 166px; width: 100%; }
 
@@ -667,8 +644,8 @@ ul li { list-style: none; }
   .profitability-footer__subtitle { margin-bottom: 14px; font-size: 12px; line-height: 18px; }
   .profitability-footer__img { width: 176px; }
   .profitability-footer__img.home img { height: 172px; }
-  .profitability-footer__img.check { top: 55px; right: -20px; }
-  .profitability-footer__img.check img { width: 100px; height: 150px; -o-object-fit: contain; object-fit: contain; }
+  .profitability-footer__img.chk { top: 55px; right: -20px; }
+  .profitability-footer__img.chk img { width: 190px; height: 192px; -o-object-fit: contain; object-fit: contain; }
   .profitability-header__item p { font-size: 20px; }
   .content-main { padding-left: 15px; } }
 
@@ -768,7 +745,7 @@ ul li { list-style: none; }
   .breadcrumb__item { margin-left: 25px; margin-right: 15px; font-size: 14px; line-height: 20px; }
   .breadcrumb__item::after { left: -23px; width: 8px; height: 12px; } }
 
-.create-contract { width: 434px; float: left; margin-right: 74px; }
+.create-contract { width: 434px; float: left; margin-right: 54px; }
 
 .create-contract__text { font-size: 14px; line-height: 20px; }
 
@@ -897,5 +874,39 @@ input[type=tel]:focus, input[type=text]:focus { border: none; }
 
 .modal__button { width: 160px; }
 
+.modal__ok { margin-bottom: 20px; }
+
+.modal__info { font-size: 14px; line-height: 17px; color: #EAEAEA; text-align: center; margin-bottom: 40px; }
+
+.modal.ok { padding-bottom: 70px; padding-top: 90px; }
+
 @media screen and (max-width: 480px) { .modal { width: 100%; } }
+
+.check { position: relative; padding-left: 68px; font-size: 16px; line-height: 20px; color: #78808D; -webkit-transition-duration: .4s; transition-duration: .4s; font-family: 'Montserrat Regular', sans-serif; }
+
+.check:hover { cursor: pointer; color: #ffffff; -webkit-transition: .4s; transition: .4s; }
+
+.check__input { position: absolute; -webkit-appearance: none; -moz-appearance: none; appearance: none; -webkit-transition: .4s; transition: .4s; }
+
+.check__input:checked + .check__box::after { background: #774BFF; left: 3px; -webkit-transition: .4s; transition: .4s; }
+
+.check__box { position: absolute; top: 50%; width: 46px; height: 24px; margin-left: -58px; border-radius: 37px; background: #666A7E; -webkit-transform: translateY(-50%); transform: translateY(-50%); -webkit-transition: .4s; transition: .4s; }
+
+.check__box::after { content: ''; position: absolute; display: block; width: 20px; height: 20px; right: 2px; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); background: #78808D; border-radius: 50%; background-size: contain; -webkit-transition-duration: .4s; transition-duration: .4s; -webkit-box-shadow: 0px -5px 7px rgba(42, 47, 72, 0.47), 0px 5px 7px #0A0B1B; box-shadow: 0px -5px 7px rgba(42, 47, 72, 0.47), 0px 5px 7px #0A0B1B; }
+
+@media screen and (max-width: 576px) { .check { padding-left: 52px; font-size: 14px; } }
+
+.button { border: none; height: 35px; padding: 0 16px; background: #7635FF; border-radius: 18px; font-size: 14px; line-height: 17px; font-weight: 700; color: #ffffff; font-family: 'Montserrat Regular', sans-serif; }
+
+.button:focus { outline: none; }
+
+.button.transp { background: #373D47; border: 1px solid #666A6F; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+@media (min-width: 992px) { .button:hover { -webkit-transition-duration: 500ms; transition-duration: 500ms; cursor: pointer; }
+  .button[disabled="disabled"], .button[disabled] { cursor: default; }
+  .button:active { background: #000000; }
+  .button[disabled="disabled"], .button[disabled] { background: #000000; }
+  .button.transp:hover { background: #7635FF; border: 1px solid #7635FF; } }
+
+@media screen and (max-width: 576px) { .button { font-size: 12px; line-height: 15px; height: 23px; } }
 /*# sourceMappingURL=style.css.map */
