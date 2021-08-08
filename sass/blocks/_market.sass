@@ -1,0 +1,81 @@
+.market
+  display: flex
+  justify-content: space-between
+  &__content
+    margin-top: -16px
+    margin-bottom: 30px
+    width: 100%
+    max-width: 480px
+    p
+      margin: 0
+      margin-bottom: 20px
+      font-size: 14px
+      line-height: 20px
+      color: $white
+      &:first-child
+        font-size: 25px
+        line-height: 30px
+        color: #EAEAEA
+  &__left
+    width: 50%
+    height: calc( 100vh - 230px )
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  &__right
+    margin-left: 20px
+    width: 50%
+    position: relative
+    right: 10px
+    top: 0
+    width: fit-content
+    height: fit-content
+    img
+      width: calc( 100% - 50px )
+      height: calc( 100% - 50px )
+  &__text
+    position: absolute
+    right: 0
+    bottom: 100px
+    margin: 0
+    font-size: 40px
+    line-height: 33px
+    color: #EAEAEA
+    span
+      +mon7
+
+@media screen and ( max-width: 1550px )
+  .market
+    &__text
+      bottom: 60px
+
+@media screen and ( max-width: 1300px )
+  .market
+    flex-wrap: wrap
+    &__left
+      width: 100%
+      height: 100%
+    &__right
+      right: auto
+      left: 50%
+      transform: translateX(-50%)
+      margin-top: 10px
+      margin-left: 0
+
+@media screen and ( max-width: 576px )
+  .market
+    &__content
+      margin-top: 0
+      p
+        &:first-child
+          font-size: 20px
+          line-height: 24px
+    &__text
+      position: relative
+      left: 50%
+      transform: translateX(-50%)
+      bottom: 0
+      width: fit-content
+      margin-top: 30px
+      font-size: 30px
+      line-height: 25px

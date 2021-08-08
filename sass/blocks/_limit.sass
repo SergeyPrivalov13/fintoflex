@@ -1,0 +1,24 @@
+.limit
+  &__title
+    text-transform: uppercase
+    margin-bottom: 36px
+  &__box
+    overflow-y: auto
+    &::-webkit-scrollbar
+      width: 0
+      height: 0
+
+  &__container
+    display: flex
+    align-items: center
+    padding-bottom: 20px
+    width: fit-content
+  &__block
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+
+@media screen and ( max-width: 576px )
+  .limit
+    &__title
+      margin-bottom: 30px

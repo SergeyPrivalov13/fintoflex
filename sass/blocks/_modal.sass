@@ -7,11 +7,15 @@
   display: flex
   flex-direction: column
   align-items: center
+  &.__bk
+    position: relative
+    top: -35px
   &__text
     font-weight: bold
     font-size: 18px
     line-height: 22px
     color: #EAEAEA
+    text-align: center
   &__sum
     margin: 0
     margin-bottom: 33px
@@ -26,7 +30,7 @@
       font-weight: 300
       +mon4
   &__button
-    width: 160px
+    width: fit-content
   &__ok
     margin-bottom: 20px
   &__info
@@ -35,9 +39,21 @@
     color: #EAEAEA
     text-align: center
     margin-bottom: 40px
+  &__product
+    margin: 0
+    margin-bottom: 32px
+    font-size: 25px
+    line-height: 28px
+    color: #EAEAEA
+    text-transform: uppercase
   &.ok
     padding-bottom: 70px
     padding-top: 90px
+
+@media screen and ( max-width: 992px )
+  .modal
+    &.__bk
+      top: 0
 
 @media screen and ( max-width: 480px )
   .modal
