@@ -27,7 +27,7 @@
 
     <div class="saidbar">
       <div class="saidbar__header">
-        
+
         <div class="user mob">
           <div class="user__block">
             <div class="user__img">
@@ -58,10 +58,10 @@
           </a>
         </div>
 
-        
+
 
         <ul class="menu">
-          <li class="menu-active">
+          <li>
             <a href="">
               <svg width="28" height="21" viewBox="0 0 28 21" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -94,7 +94,7 @@
               Мои активы
             </a>
           </li>
-          <li>
+          <li class="menu-active">
             <a href="">
               <svg width="24" height="22" viewBox="0 0 24 22" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -205,299 +205,128 @@
       </div>
 
       <div class="content-main">
-        <h3 class="title">Привет, Константин</h3>
 
-        <div class="content-main__gains">
-          <div class="gains">
-            <div class="gains-rank">
-              <div class="gains-rank__header">
-                <div class="gains-rank__img">
-                  <img src="img/rank/rank.png" alt="rank">
-                </div>
-                <p>Серебрянный <br> менеджер</p>
-              </div>
+        <ul class="breadcrumb">
+          <li class="breadcrumb__item"><a href="">FLEX Home</a></li>
+          <li class="breadcrumb__item">Оформление объекта</li>
+        </ul>
 
-              <div class="gains-rank__footer">
-                <p>Следующие уровень</p>
+        
+        <div class="create-contract">
+          <p class="create-contract__text">Укажите адрес объекта и его рыночную стоимость, чтобы мы могли покрыть до 50% от стоимости.</p>
 
-                <div class="level">
-                  <div class="level__box">
-                    <div class="level__left">
-                      <div class="level__img">
-                        <img src="img/rank/level_1.png" alt="level">
-                      </div>
+          <div class="select-box">
+            <input type="text" class="__input" placeholder="Адрес объекта">
+            <input type="text" class="__input" placeholder="Рыночная стоимость">
 
-                      <div class="level__text">
-                        <p>Золотой менеджер</p>
-                        <span>Оборот > 5000$</span>
-                      </div>
-                    </div>
+            <div class="__select" data-state="">
+              <div class="__select__title" data-default="Option 0">Выберите программу</div>
+              <div class="__select__content">
+                <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect" checked />
+                <label for="singleSelect0" class="__select__label">Выберите программу</label>
 
-                    <div class="level__right">
-                      <p>4 680 FLEX</p>
-                    </div>
+                <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect" checked />
+                <label for="singleSelect0" class="__select__label">Test</label>
 
-                  </div>
+                <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect" />
+                <label for="singleSelect1" class="__select__label">Easy</label>
+                
+                <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect" />
+                <label for="singleSelect3" class="__select__label">Medium</label>
 
-                  <div class="progress">
-                    <progress max="100" value="90"></progress>
-                    <div class="progress-bg">
-                      <div class="progress-bar"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="gains-more">
-              <div class="level">
-                <div class="level__box">
-                  <div class="level__left">
-                    <div class="level__img">
-                      <img src="img/rank/level_2.png" alt="level">
-                    </div>
-
-                    <div class="level__text more">
-                      <p>Пригласите 5 друзей</p>
-                      <span>10% с личных продаж</span>
-                    </div>
-                  </div>
-
-                  <div class="level__right">
-                    <span>3</span>
-                  </div>
-
-                </div>
-
-                <div class="progress">
-                  <progress max="100" value="60"></progress>
-                  <div class="progress-bg">
-                    <div class="progress-bar"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="level">
-                <div class="level__box">
-                  <div class="level__left">
-                    <div class="level__img">
-                      <img src="img/rank/level_3.png" alt="level">
-                    </div>
-
-                    <div class="level__text more">
-                      <p>Совершите покупку на <br> 10 000 FX$</p>
-                      <span>4 ур. накопительного бонуса</span>
-                    </div>
-                  </div>
-
-                  <div class="level__right">
-                    <span>7 804 FLEX</span>
-                  </div>
-
-                </div>
-
-                <div class="progress">
-                  <progress max="100" value="80"></progress>
-                  <div class="progress-bg">
-                    <div class="progress-bar"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="level">
-                <div class="level__box">
-                  <div class="level__left">
-                    <div class="level__img">
-                      <img src="img/rank/level_4.png" alt="level">
-                    </div>
-
-                    <div class="level__text more">
-                      <p>Совершите покупку на <br> 10 000 FX$</p>
-                      <span>3 ур. матчен бонус</span>
-                    </div>
-                  </div>
-
-                  <div class="level__right">
-                    <span>70%</span>
-                  </div>
-
-                </div>
-
-                <div class="progress">
-                  <progress max="100" value="75"></progress>
-                  <div class="progress-bg">
-                    <div class="progress-bar"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="level">
-                <div class="level__box">
-                  <div class="level__left">
-                    <div class="level__img">
-                      <img src="img/rank/level_5.png" alt="level">
-                    </div>
-
-                    <div class="level__text more">
-                      <p>Пригласите 40 друзей</p>
-                      <span>1 000 FX$ за <br> приглашенных друзей</span>
-                    </div>
-                  </div>
-
-                  <div class="level__right">
-                    <span>23</span>
-                  </div>
-
-                </div>
-
-                <div class="progress">
-                  <progress max="100" value="80"></progress>
-                  <div class="progress-bg">
-                    <div class="progress-bar"></div>
-                  </div>
-                </div>
+                <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect" />
+                <label for="singleSelect4" class="__select__label">PRO</label>
               </div>
             </div>
-
-            <button class="gains-progress">Прогресс достижений</button>
-
+            
           </div>
 
-          <div class="profitability">
-            <div class="profitability-header">
-              <div class="profitability-header__item active">
-                <div>
-                  <span>Баланс</span>
-                  <p>400 392 FLEX</p>
-                </div>
+          <div class="information-block">
+            <div class="information-block__item">
+              <div class="information-block__left">
+                <p>Взнос</p>
+                <div class="information-block__hr"></div>
               </div>
-              <div class="profitability-header__item">
-                <div>
-                  <span>Ожидается</span>
-                  <p>400 392 FLEX</p>
-                </div>
+              
+              <div class="information-block__right">
+                40%
               </div>
-              <div class="profitability-header__item">
-                <div>
-                  <span>Товарооборот</span>
-                  <p>400 392 FLEX</p>
-                </div>
-              </div>
-              <div class="profitability-header__item">
-                <div>
-                  <span>Чистая прибыль</span>
-                  <p>400 392 FLEX</p>
-                </div>
-              </div>
-              <div class="profitability-header__item">
-                <div>
-                  <span>Доход</span>
-                  <p>400 392 FLEX</p>
-                </div>
-              </div>
-              <div class="profitability-header__item">
-                <div>
-                  <span>Инвестиции</span>
-                  <p>400 392 FLEX</p>
-                </div>
-              </div>
+              
+            </div> 
 
+            <div class="information-block__item">
+              <div class="information-block__left">
+                <p>Дней ожидания</p>
+                <div class="information-block__hr"></div>
+              </div>
+              
+              <div class="information-block__right">
+                140 дней
+              </div>
+              
             </div>
 
-            <div class="profitability-footer">
-              <div class="profitability-footer__box">
-                <div class="profitability-footer__item">
-                  <div class="profitability-footer__img">
-                    <img src="img/flex/flex_1.png" alt="">
-                  </div>
-  
-                  <div>
-                    <p class="profitability-footer__title"><span>flex</span> MARKET</p>
-                    <span class="profitability-footer__subtitle">Выгода до 50% от стоимости</span>
-  
-                    <div class="profitability-footer__content">
-                      <p>Лимит покупки</p>
-                      <span>20 000 FX$</span>
-                    </div>
-  
-                    <span class="profitability-footer__property">В собственности через 120-180 дней</span>
-  
-                  </div>
-  
-                  <button class="button profitability-footer__button">Подробнее</button>
-                </div>
-                <div class="profitability-footer__item">
-                  <div class="profitability-footer__img auto">
-                    <img src="img/flex/auto.png" alt="">
-                  </div>
-  
-                  <div>
-                    <p class="profitability-footer__title"><span>flex</span> AUTO</p>
-                    <span class="profitability-footer__subtitle">Выгода до 50% от стоимости</span>
-  
-                    <div class="profitability-footer__content">
-                      <p>Лимит покупки</p>
-                      <span>400 000 FX$</span>
-                    </div>
-  
-                    <span class="profitability-footer__property">В собственности через 120-180 дней</span>
-  
-                  </div>
-  
-                  <button class="button profitability-footer__button">Подробнее</button>
-                </div>
-                <div class="profitability-footer__item">
-                  <div class="profitability-footer__img home">
-                    <img src="img/flex/flex_3.png" alt="">
-                  </div>
-  
-                  <div>
-                    <p class="profitability-footer__title"><span>flex</span> HOME</p>
-                    <span class="profitability-footer__subtitle">Выгода до 50% от стоимости</span>
-  
-                    <div class="profitability-footer__content">
-                      <p>Лимит покупки</p>
-                      <span>1 500 000 FX$</span>
-                    </div>
-  
-                    <span class="profitability-footer__property">В собственности через 120-180 дней</span>
-  
-                  </div>
-  
-                  <button class="button profitability-footer__button">Подробнее</button>
-                </div>
-                <div class="profitability-footer__item">
-                  <div class="profitability-footer__img chk">
-                    <img src="img/flex/flex_4.png" alt="">
-                  </div>
-  
-                  <div>
-                    <p class="profitability-footer__title"><span>flex</span> MARKET</p>
-                    <span class="profitability-footer__subtitle">Выгода до 50% от стоимости</span>
-  
-                    <div class="profitability-footer__content">
-                      <p>Лимит покупки</p>
-                      <span>1 500 000 FLEX</span>
-                    </div>
-  
-                    <span class="profitability-footer__property">В собственности через 120-180 дней</span>
-  
-                  </div>
-  
-                  <button class="button profitability-footer__button">Подробнее</button>
-                </div>
+            <div class="information-block__item">
+              <div class="information-block__left">
+                <p>Дата получения</p>
+                <div class="information-block__hr"></div>
               </div>
+              
+              <div class="information-block__right">
+                25.09.2021
+              </div>
+              
+            </div>
+
+            <div class="information-block__item dep">
+              <div class="information-block__left">
+                <p>Стоимость для вас</p>
+              </div>
+              
+              <div class="information-block__right">
+                5 000 422 FLEX
+              </div>
+              
             </div>
 
           </div>
 
+          <button class="button create-contract__button transp">Сформировать предложение </button>
+
+        </div> <!--create-contract-->
+
+        <div>
+          <div class="title">Мой заказ</div>
+          
+          <div class="table-box">
+            <div class="table-box__container">
+              <div class="table-box__item four head">
+                <p>Адрес объекта</p>
+                <p>Рыночная стоимость</p>
+                <p>Стоимость для вас</p>
+                <p>Дата получения </p>
+              </div>
+              <div class="table-box__item four">
+                <p>г. Москва, р-н Люберцы, Кузнецова 34</p>
+                <p>11 100 024 FLEX</p>
+                <p>5 000 000 FLEX</p>
+                <p>29.06.2021</p>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="table-box__issue">
+            <div>
+              <p class="table-box__total">Итого <span>40 000 FLEX</span></p>
+              <button class="button table-box__button">Оформить заказ</button>
+            </div>
+          </div>
         </div>
 
       </div>
 
     </div>
-
   </div>
 
 
@@ -672,7 +501,6 @@
     </div>
 
   </div>
-
 
   <script src="js/main.js"></script>
 

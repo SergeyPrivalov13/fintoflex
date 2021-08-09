@@ -92,14 +92,22 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
         if (!target.closest('.__select__content') && !target.closest('.__select__title')){
           selectSingle.setAttribute('data-state', '');
         }
-
       }
-      
-
-
     })
   };
   addClass();
+
+  const houseContent = () => {
+    const houseContent = document.querySelector('.house-content');
+    const contentHeader = document.querySelector('.content__header').clientHeight;
+
+    if(houseContent) {
+      houseContent.style.cssText = `
+        height: calc( 100% - ${contentHeader}px)
+      `
+    }
+  }
+  houseContent()
 
   const addMarg = () => {
     const contentHeader = document.querySelector('.content__header').clientHeight;
@@ -107,10 +115,10 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
     const contentMain = document.querySelector('.content-main');
     if (screenWidth < 992) {
       saidAct.style.cssText = `
-        margin-top: ${contentHeader - 2}px;
+        margin-top: ${contentHeader}px;
       `;
       contentMain.style.cssText = `
-        margin-top: ${contentHeader - 2}px;
+        margin-top: ${contentHeader}px;
       `
     }
   }

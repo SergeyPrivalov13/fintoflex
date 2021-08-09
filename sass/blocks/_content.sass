@@ -3,6 +3,10 @@
   padding-right: 68px
   overflow: hidden
   overflow-y: auto
+  &.__auto
+    padding-right: 0
+    .content__header
+      margin-right: 68px
   &.bg_1
     background: url('../img/bg/bg_1.png') no-repeat
     background-size: 554px 853px
@@ -17,7 +21,7 @@
     display: flex
     align-items: center
     justify-content: flex-end
-    padding-bottom: 12px
+    padding-bottom: 5px
     padding-top: 40px
     background: $gray-dark
     &::after
@@ -107,7 +111,7 @@
     display: none
 
 .exit
-  margin-left: 20px
+  margin-left: 56px
   svg
     fill: $gray
     transition: .4s
@@ -115,15 +119,26 @@
     svg
       fill: rgba($white, .8 )
 
+@media screen and ( max-width: 1400px )
+  .content
+    padding-right: 36px
+    &.__auto
+      .content__header
+        margin-right: 36px
+    &-main
+      padding-left: 36px
+
 @media screen and ( max-width: 1200px )
   .content
+    padding-right: 26px
+    &.__auto
+      .content__header
+        margin-right: 26px
     &-main
+      padding-left: 26px
       &__gains
         flex-wrap: wrap
         justify-content: center
-  .profitability
-    padding-left: 0 !important
-
 
 @media screen and ( max-width: 992px )
   .language
@@ -138,18 +153,22 @@
     &__header
       position: fixed
       width: 100%
-      justify-content: space-between      
+      justify-content: space-between
+      padding-bottom: 10px
       &::after
         display: none
-
-
-      
 
 @media screen and ( max-width: 576px )
   .content
     padding-right: 0 !important
+    &.__auto
+      .content
+        &-main
+          padding-right: 0
     &-main
       padding: 20px 15px
       padding-bottom: 50px
-  
-  
+    &__header
+      padding-bottom: 8px
+  .exit
+    margin-left: 16px
