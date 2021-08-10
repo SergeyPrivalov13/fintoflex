@@ -28,7 +28,7 @@
         font-weight: 400
         font-size: 30px
         line-height: 45px
-        +pop3
+        +pop7
         background: linear-gradient(180deg, #E9B9E9 0%, #FFFFFF 100%)
         -webkit-background-clip: text
         -webkit-text-fill-color: transparent
@@ -123,11 +123,27 @@
       line-height: 15px
       color: #78808D
 
+  &.__cashback
+    width: 100%
+    .profitability
+      &-header
+        &__item
+          max-width: 49%
+          align-items: flex-start
+    &-mob
+      display: none
+      .profitability
+        &-header
+          &__item
+            max-width: 49%
+            align-items: flex-start
+
 @media screen and ( max-width: 1600px )
   .profitability
     padding-left: 30px
     &-header
       &__item
+        padding-left: 35px
         p
           font-size: 26px
 
@@ -158,10 +174,25 @@
         height: 106px
         margin-bottom: 30px
         p
-          font-size: 26px  
+          font-size: 26px
 @media screen and ( max-width: 1300px )
   .profitability
     width: 64%
+    &.__cashback
+      .profitability
+        &-header
+          &__item
+            padding-top: 18px
+            padding-left: 26px
+            span
+              display: block
+              font-size: 12px
+              line-height: 14px
+            div
+              display: flex
+              flex-direction: column
+              justify-content: space-between
+              height: 100%
 @media screen and ( max-width: 1200px )
   .profitability
     width: 100%
@@ -171,7 +202,12 @@
         p
           font-size: 22px
 
-
+@media screen and ( max-width: 768px )
+  .profitability
+    &.__cashback
+      display: none
+      &-mob
+        display: block
 @media screen and ( max-width: 576px )
   .profitability
     &-footer
@@ -211,10 +247,17 @@
             height: 192px
             object-fit: contain
 
-    &-header
+    &-header      
       &__item
         p
           font-size: 20px
+    &.__cashback-mob
+      .profitability-header
+        &__item
+          padding-left: 16px
+          span
+            font-size: 12px
+      
 
 @media screen and ( max-width: 420px )
   .profitability
@@ -223,3 +266,15 @@
         p
           font-size: 18px
           line-height: 30px
+    &.__cashback-mob
+        .profitability
+          &-header
+            &__item
+              padding-left: 20px
+              div
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+              span
+                font-size: 11px
+                line-height: 14px

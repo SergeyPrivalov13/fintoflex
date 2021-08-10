@@ -12,6 +12,11 @@
         height: 100%
     .limit
       margin-bottom: 50px
+  &.__cashback
+    position: relative
+    height: 100%
+    flex-wrap: nowrap
+    flex-direction: column
   &__content
     margin-top: -16px
     margin-bottom: 30px
@@ -69,6 +74,21 @@
         right: 0
         width: 90%
         height: 90%
+    &.__cashback
+      position: absolute
+      z-index: 1
+      right: 0
+      bottom: 0
+      right: 0
+      width: 100%
+      max-width: 664px
+      height: 100%
+      img
+        position: absolute
+        right: 0
+        bottom: 0
+        width: 100%
+        height: 90%
 
   &__text
     position: absolute
@@ -101,16 +121,36 @@
         position: absolute
         top: 0
         left: 0
+    &.__cashback
+      position: absolute
+      top: 0
+      right: -200px
+      &-mob
+        display: none
+        position: absolute
+        bottom: 90px
+        left: 0
+  &__button
+    max-width: 258px
+    width: 100%
 
 @media screen and ( max-width: 1550px )
   .market
     &__text
       bottom: 60px
+      &.__cashback
+        top: auto
+        right: 150px
+        bottom: 0
     &__right
       &.__house
         img
           width: 75%
           height: 75%
+      &.__cashback
+        img
+          width: 85%
+          height: 85%
 
 @media screen and ( max-width: 1300px )
   .market
@@ -125,6 +165,8 @@
     &__left
       width: 100%
       height: 100%
+      &.__cashback
+        height: fit-content
     &__right
       right: auto
       left: 50%
@@ -140,13 +182,28 @@
         img
           width: 100%
           height: 100%
-
+      &.__cashback
+        position: relative
+        max-width: 100%
+        height: 100%
+        margin-top: 0
+        img
+          width: 490px
+          height: 540px
+          transform: rotate(-30deg)
+          right: -316px
+          top: auto
+          bottom: 94px
     &__text
       &.__auto
         display: none
         &-mob
           display: block
       &.__house
+        display: none
+        &-mob
+          display: block
+      &.__cashback
         display: none
         &-mob
           display: block
@@ -169,6 +226,17 @@
           bottom: auto
           width: auto
           height: auto
+      &.__cashback
+        img
+          position: relative
+          bottom: auto
+          top: 0
+    &__text
+      &.__cashback
+        &-mob
+          left: 0
+          top: auto
+          bottom: 60px
 
 @media screen and ( max-width: 576px )
   .market
@@ -195,8 +263,37 @@
         position: absolute
         top: -58px
         left: 88px
+      &.__cashback-mob
+        left: 123px
     &__right
       &.__house
         top: 0
         bottom: auto
         height: fit-content
+      &.__cashback
+        img
+          top: -28px
+          width: 326px
+          height: 387px
+          right: -356px
+@media screen and ( max-width: 576px )
+  .market
+    &__right
+      &.__cashback
+        img
+          width: 306px
+          height: 367px
+          right: -286px
+@media screen and ( max-width: 440px )
+  .market
+    &__right
+      &.__cashback
+        img
+          top: -10px
+          width: 224px
+          height: 294px
+          right: -194px
+    &__text
+      &.__cashback-mob
+        bottom: 38px
+        font-size: 24px

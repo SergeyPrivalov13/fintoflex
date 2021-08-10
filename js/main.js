@@ -119,6 +119,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
       `;
       contentMain.style.cssText = `
         margin-top: ${contentHeader}px;
+        height: calc( 100% - ${contentHeader}px);
       `
     }
   }
@@ -126,11 +127,12 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
 
   const select = () => {
     const selectBox = document.querySelector('.select-box');
+    const selectSingle = document.querySelector('.__select');
     
-    if(selectBox) {
-      const selectSingle = document.querySelector('.__select');
+    if(selectBox && selectSingle) {
       const selectSingle_title = selectSingle.querySelector('.__select__title');
       const selectSingle_labels = selectSingle.querySelectorAll('.__select__label');
+      
       // Toggle menu
       selectSingle_title.addEventListener('click', () => {
         if ('active' === selectSingle.getAttribute('data-state')) {

@@ -1,0 +1,217 @@
+.cashback
+  display: flex
+  justify-content: space-between
+  &-left
+    margin-right: 46px
+    width: 50%
+    &__title
+      display: none
+      margin-bottom: 21px
+    &__header
+      display: flex
+      justify-content: space-between
+  &-right
+    width: 50%
+    &__title
+      margin-bottom: 18px
+  &__item
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    align-items: flex-start
+    width: 100%
+    max-width: 48%
+    height: 173px
+    margin-bottom: 32px
+    padding: 14px
+    padding-left: 35px
+    background: #373D47
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12)
+    border-radius: 18px
+    span
+      font-size: 14px
+      line-height: 17px
+      color: #D1D1D1
+      +mon4
+    p
+      margin: 0
+      font-weight: 400
+      font-size: 30px
+      line-height: 45px
+      +pop7
+      background: linear-gradient(180deg, #E9B9E9 0%, #FFFFFF 100%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      color: $white
+  &-load
+    margin-top: 32px
+    width: 100%
+    padding: 33px
+    background: rgba(196, 196, 196, 0.07)
+    border-radius: 18px
+    text-align: center
+    p
+      margin: 0
+      margin-top: 20px
+      margin-bottom: 30px
+      font-size: 20px
+      line-height: 24px
+      color: #D1D1D1
+  &-history
+    margin-bottom: 30px
+    padding: 36px
+    padding-right: 15px
+    background: #373D47
+    border-radius: 18px
+    width: 100%
+    &__box
+      padding-right: 12px
+      max-height: 430px
+      overflow-y: auto
+      &::-webkit-scrollbar
+        width: 10px
+
+      &::-webkit-scrollbar-track
+        background: rgba(90, 97, 112, 0.56)
+        border-radius: 116px
+        transform: rotate(-90deg)
+
+      &::-webkit-scrollbar-thumb
+        background: #292F39
+        border-radius: 18px
+        transform: rotate(-90deg)
+        border: 2px solid rgba(90, 97, 112, 0.56)
+
+    &__item
+      position: relative
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
+      padding-top: 15px
+      padding-bottom: 15px
+      &:first-child
+        padding-top: 0
+      &:last-child
+        padding-bottom: 0
+        &::after
+          display: none
+      &::after
+        content: ''
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        height: 2px
+        background: linear-gradient(3.98deg, #373A43 191.71%, rgba(0, 0, 0, 0.83) 282.29%)
+    &__left
+      p
+        margin: 0
+        margin-bottom: 8px
+        font-size: 15px
+        line-height: 18px
+      span
+        font-size: 15px
+        line-height: 18px
+        font-weight: bold
+      a
+        font-weight: bold
+        font-size: 12px
+        line-height: 15px
+        color: $white
+        text-decoration: underline
+    &__right
+      padding-left: 12px
+      padding-right: 20px
+      font-size: 15px
+      line-height: 18px
+      width: fit-content
+      white-space: nowrap
+
+@media screen and ( max-width: 1300px )
+  .cashback
+    flex-wrap: wrap
+    &-left
+      width: 80%
+      margin-bottom: 50px
+    &-right
+      width: 80%
+
+@media screen and ( max-width: 1200px )
+  .cashback
+    flex-wrap: wrap
+    &-left
+      width: 100%
+      margin-right: 0
+      margin-bottom: 50px
+    &-right
+      width: 100%
+
+@media screen and ( max-width: 992px )
+  .cashback
+    flex-wrap: wrap
+    &-left
+      &__title
+        display: block
+
+@media screen and ( max-width: 576px )
+  .cashback
+    &__item
+      height: 135px
+      margin-bottom: 15px
+      padding: 20px
+      justify-content: space-around
+      p
+        font-size: 20px
+        line-height: 24px
+      span
+        font-size: 11px
+        line-height: 13px
+    &-left
+      margin-bottom: 30px
+    &__text
+      display: none
+    &-load
+      margin-top: 15px
+      margin-bottom: 0
+    &-history
+      padding: 28px
+      padding-right: 10px
+      &__box
+        height: 360px
+        &::-webkit-scrollbar
+          width: 6px
+
+        &::-webkit-scrollbar-track
+          background: rgba(90, 97, 112, 0.56)
+          border-radius: 116px
+          transform: rotate(-90deg)
+
+        &::-webkit-scrollbar-thumb
+          background: #292F39
+          border-radius: 18px
+          transform: rotate(-90deg)
+          border: 1px solid rgba(90, 97, 112, 0.56)
+      &__item
+        padding-top: 12px
+        padding-bottom: 12px
+      &__left
+        p
+          font-size: 11px
+          line-height: 13px
+        span
+          font-size: 15px
+          line-height: 18px
+        a
+          font-size: 12px
+          line-height: 15px
+      &__right
+        font-size: 11px
+        line-height: 13px
+
+@media screen and ( max-width: 340px )
+  .cashback
+    &-left
+      &__header
+        flex-wrap: wrap
+    &__item
+      max-width: 100%

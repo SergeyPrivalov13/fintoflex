@@ -2,6 +2,8 @@
   width: 434px
   float: left
   margin-right: 54px
+  &.__cashback
+    width: 400px
   &__text
     margin-top: 0
     font-size: 14px
@@ -12,18 +14,34 @@
     margin-top: 16px
     font-size: 18px
     line-height: 22px
-  
+
 @media screen and ( max-width: 1200px )
   .create-contract
     float: none
     margin: 0
     margin-bottom: 30px
-  
+    &.__cashback
+      width: 45%
+      float: left
+      margin-right: 30px
 
 @media screen and ( max-width: 992px )
   .create-contract
     margin: 0 auto
     margin-bottom: 30px
+
+@media screen and ( max-width: 768px )
+  .create-contract
+    &.__cashback
+      float: none
+      margin: 0
+      margin-bottom: 30px
+      width: 100%
+    &__cont
+      width: 60%
+      margin: 0 auto
 @media screen and ( max-width: 576px )
   .create-contract
     width: 100%
+    &__cont
+      width: 100%
