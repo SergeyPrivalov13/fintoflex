@@ -1,0 +1,44 @@
+body
+  &.__white
+    background: #E5E5E5
+    .content__header
+      background: #E5E5E5
+    .title
+      color: #3E3E3E
+    .menu
+      li
+        &.menu-active
+          a
+            color: #575757
+            &::after
+              left: 1px
+              opacity: 0.6
+            &:hover
+              color: #575757
+              svg
+                fill: #575757
+
+            svg
+              fill: #575757
+        a
+          color: #929292          
+          &:hover
+            +mon5      
+            color: #575757
+            svg
+              fill: #575757
+        svg
+          fill: #575757
+
+    .saidbar
+      background: $white
+      &::after 
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.06) 71.01%, rgba(255, 255, 255, 0) 99.52%);
+
+    .user
+      &__text
+        p
+          color: #15172E
+          +mon5
+    
+
