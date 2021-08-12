@@ -1,23 +1,195 @@
-.settings
+.setting
   &-header
-    border: 1px solid
     display: flex
     align-items: center
+    flex-wrap: wrap
+
     &__tab
       display: flex
       align-items: center
       justify-content: center
       height: 34px
-      margin-right: 18px
-      padding: 0 18px
+      margin-right: 16px
+      margin-bottom: 20px
+      padding: 0 15px
       font-size: 12px
       line-height: 15px
       background: #3C3E40
       border-radius: 18px
-      transition: .6s
+      +mon5
+      transition: .4s
       &:last-child
         margin-right: 0
       &:hover
+        color: $white
         cursor: pointer
-        background:  rgba(202, 190, 239, 0.51)
-      
+        background: rgba(202, 190, 239, 0.21)
+
+      &.active
+        background: linear-gradient(90deg, rgba(120, 128, 141, 0.51) 0%, rgba(202, 190, 239, 0.51) 99.03%)
+
+  &-tab
+    margin-top: 14px
+    transition: opacity .6s
+    &__title
+      margin-bottom: 18px
+    &__box
+      display: flex
+      &.__password
+        position: relative
+        .setting-tab__button
+          position: absolute
+          left: 0
+          bottom: 0
+    &__item
+      width: 35%
+      margin-right: 60px
+      margin-bottom: 58px
+      &:last-child
+        margin-right: 0
+        margin-bottom: 0
+
+    &.active
+      opacity: 1
+      height: 100%
+      margin-top: 14px
+      &-none
+        opacity: 0
+        height: 0
+        margin-top: 0
+    &__button
+      height: 42px
+      max-width: 175px
+      width: 100%
+    &__password
+      p
+        margin: 0
+        margin-bottom: 18px
+      input
+        height: 49px
+        margin-bottom: 15px
+        font-size: 16px
+        line-height: 20px
+        font-weight: normal
+      .setting-tab__old
+        margin-bottom: 50px
+
+  &__user
+    display: flex
+    align-items: center
+    margin-bottom: 34px
+    a
+      font-size: 12px
+      line-height: 14px
+      color: $white
+      text-decoration: underline
+  &__img
+    width: 61px
+    height: 61px
+    border-radius: 50%
+    overflow: hidden
+    margin-right: 20px
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+  &-input
+    &__text
+      font-size: 12px
+      line-height: 15px
+      color: #D1D1D1
+      margin-bottom: 32px
+      margin-top: 48px
+    &__item
+      margin-bottom: 8px
+      &:last-child
+        margin-bottom: 0
+      label
+        display: block
+        margin: 0
+        margin-bottom: 12px
+        font-size: 12px
+        line-height: 15px
+        color: #D1D1D1
+        +mon4
+      input
+        height: 49px
+        margin-bottom: 15px
+        font-size: 16px
+        line-height: 20px
+        font-weight: normal
+      a
+        font-size: 12px
+        line-height: 15px
+        color: $white
+    &__referal
+      position: relative
+      input
+        padding-right: 60px
+      svg
+        position: absolute
+        right: 20px
+        top: 14px
+        stroke: #F0F0F0
+
+@media screen and ( max-width: 1200px )
+  .setting
+    &-tab
+      &__item
+        width: 40%
+
+@media screen and ( max-width: 768px )
+  .setting
+    &-tab
+      &__box
+        flex-direction: column-reverse
+        &.__password
+          flex-direction: column
+          .setting-tab__button
+            position: relative
+            padding: 14px
+      &__item
+        width: 70%
+        margin-right: 0
+        margin-bottom: 23px
+      &__button
+        margin-bottom: 30px
+    &-input
+      &__item
+        &.__mob
+          display: none
+        a
+          display: none
+
+@media screen and ( max-width: 576px )
+  .setting
+    &-tab
+      &__item
+        width: 80%
+      &__button
+        margin-top: 14px
+        max-width: 100%
+      &__box
+        padding-right: 15px
+    &-header
+      justify-content: space-between
+      &__tab
+        margin-right: 0
+
+@media screen and ( max-width: 500px )
+  .setting
+    &-tab
+      &__item
+        width: 100%
+
+@media screen and ( max-width: 360px )
+  .setting
+    &-tab
+      &__item
+      &__button
+        margin-top: 14px
+        max-width: 100%
+    &-header
+      justify-content: flex-start
+      &__tab
+        margin-right: 10px

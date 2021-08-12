@@ -19,8 +19,8 @@
   <title>FINTOFLEX</title>
 </head>
 
-<body>
-  
+<body class="__registr">
+
   <div class="registration">
     <div class="registration__container">
       <div class="registration__logo">
@@ -32,32 +32,28 @@
         <div class="registration__header">
           <input type="text" class="__input" placeholder="Ваше имя">
           <input type="text" class="__input" placeholder="Ваша фамилия">
-          
-          <div class="select-box">
-            <div class="__select" data-state="">
-              <div class="__select__title" data-default="Option 0">Выберите страну</div>
-              <div class="__select__content">
-                <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect" checked />
-                <label for="singleSelect0" class="__select__label">Выберите страну</label>
-  
-                <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect" checked />
-                <label for="singleSelect0" class="__select__label">Россия</label>
-  
-                <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect" checked />
-                <label for="singleSelect0" class="__select__label">Франция</label>
-  
-                <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect" />
-                <label for="singleSelect1" class="__select__label">Германия</label>
-                
-                <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect" />
-                <label for="singleSelect3" class="__select__label">Испания</label>
-  
-                <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect" />
-                <label for="singleSelect4" class="__select__label">Тайланд</label>
-              </div>
-            </div>  
-          </div>
-  
+
+          <select id="demo-htmlselect">
+            <option value="0" data-imagesrc="img/svg/icon_usa.svg">США</option>
+
+            <option value="1" data-imagesrc="img/svg/icon_france.svg">Франция
+            </option>
+
+            <option value="2" selected="selected" data-imagesrc="img/svg/icon__russia.svg">Россия</option>
+
+            <option value="3" data-imagesrc="img/svg/icon_germany.svg">
+              Германия</option>
+            <option value="0" data-imagesrc="img/svg/icon_usa.svg">США</option>
+
+            <option value="1" data-imagesrc="img/svg/icon_france.svg">Франция
+            </option>
+
+            <option value="2" selected="selected" data-imagesrc="img/svg/icon__russia.svg">Россия</option>
+
+            <option value="3" data-imagesrc="img/svg/icon_germany.svg">
+              Германия</option>
+          </select>
+
           <input type="email" class="__input" placeholder="Ваш e-mail">
         </div>
 
@@ -78,7 +74,16 @@
   </div>
 
 
-  <script src="js/main.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.ddslick.min.js"></script>
+  <script>
+    $('#demo-htmlselect').ddslick({
+      onSelected: function (selectedData) {
+        //callback function: do something with selectedData;
+      }
+    });
+  </script>
+
 
 </body>
 

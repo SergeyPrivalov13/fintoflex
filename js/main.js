@@ -242,8 +242,9 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
   }
 
   if (setting){
-    tabs('.setting', '.setting-header', '.contract-tab', '.setting-header__tab', 'setting-header__tab', '.contract-tab__box');
+    tabs('.setting', '.setting-header', '.setting-tab', '.setting-header__tab', 'setting-header__tab', '.setting-tab__box');
   }
+
 
   
 
