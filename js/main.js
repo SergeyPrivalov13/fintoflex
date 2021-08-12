@@ -35,34 +35,37 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
       // Появление блока оповещения
       const substrate = document.querySelector('.substrate');
 
-      if (screenWidth < 992) {
-        if (target.closest('#bell')) {
-          elem.classList.toggle('active');
-          substrate.classList.toggle('active');
-          body.classList.toggle('active');
+      if(elem) {
+        if (screenWidth < 992) {
+          if (target.closest('#bell')) {
+            elem.classList.toggle('active');
+            substrate.classList.toggle('active');
+            body.classList.toggle('active');
+          } else {
+            elem.classList.remove('active');
+            substrate.classList.remove('active');
+            body.classList.remove('active');
+          }
+  
+          if (target.closest('.bell__container')) {
+            elem.classList.add('active');
+            substrate.classList.add('active');
+            body.classList.add('active');
+          }
+  
+  
         } else {
-          elem.classList.remove('active');
-          substrate.classList.remove('active');
-          body.classList.remove('active');
+          if (target.closest('#bell')) {
+            elem.classList.toggle('active');
+          } else {
+            elem.classList.remove('active');
+          }
+  
+          if (target.closest('.bell__container')) {
+            elem.classList.add('active')
+          }
         }
 
-        if (target.closest('.bell__container')) {
-          elem.classList.add('active');
-          substrate.classList.add('active');
-          body.classList.add('active');
-        }
-
-
-      } else {
-        if (target.closest('#bell')) {
-          elem.classList.toggle('active');
-        } else {
-          elem.classList.remove('active');
-        }
-
-        if (target.closest('.bell__container')) {
-          elem.classList.add('active')
-        }
       }
 
 
@@ -71,37 +74,40 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
       const btn = document.querySelector('.burger');
       const saidbar = document.querySelector('.saidbar');
 
-      if (target.closest('.burger')) {
-        btn.classList.toggle('cls');
-        saidbar.classList.toggle('active');
-        body.classList.toggle('atv');
-      } else {
-        btn.classList.remove('cls');
-        saidbar.classList.remove('active');
-        body.classList.remove('atv');
-      }
-      if (target.closest('.saidbar')) {
-        btn.classList.add('cls');
-        saidbar.classList.add('active');
-        body.classList.add('atv');
-      }
-
-      // Закрывает select если кликнули мимо
-      const selectSingle = document.querySelector('.__select');
-      if (selectSingle) {
-        if (!target.closest('.__select__content') && !target.closest('.__select__title')) {
-          selectSingle.setAttribute('data-state', '');
+      if(saidbar) {
+        if (target.closest('.burger')) {
+          btn.classList.toggle('cls');
+          saidbar.classList.toggle('active');
+          body.classList.toggle('atv');
+        } else {
+          btn.classList.remove('cls');
+          saidbar.classList.remove('active');
+          body.classList.remove('atv');
+        }
+        if (target.closest('.saidbar')) {
+          btn.classList.add('cls');
+          saidbar.classList.add('active');
+          body.classList.add('atv');
+        }
+  
+        // Закрывает select если кликнули мимо
+        const selectSingle = document.querySelector('.__select');
+        if (selectSingle) {
+          if (!target.closest('.__select__content') && !target.closest('.__select__title')) {
+            selectSingle.setAttribute('data-state', '');
+          }
         }
       }
+
     })
   };
   addClass();
 
   const houseContent = () => {
     const houseContent = document.querySelector('.house-content');
-    const contentHeader = document.querySelector('.content__header').clientHeight;
-
+    
     if (houseContent) {
+      const contentHeader = document.querySelector('.content__header').clientHeight;
       houseContent.style.cssText = `
         height: calc( 100% - ${contentHeader}px)
       `
@@ -110,17 +116,22 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
   houseContent()
 
   const addMarg = () => {
-    const contentHeader = document.querySelector('.content__header').clientHeight;
     const saidAct = document.querySelector('.saidbar');
-    const contentMain = document.querySelector('.content-main');
-    if (screenWidth < 992) {
-      saidAct.style.cssText = `
-        margin-top: ${contentHeader}px;
-      `;
-      contentMain.style.cssText = `
-        margin-top: ${contentHeader}px;
-        height: calc( 100% - ${contentHeader}px);
-      `
+    
+    if(saidAct){
+      const contentMain = document.querySelector('.content-main');
+      const contentHeader = document.querySelector('.content__header').clientHeight;
+
+
+      if (screenWidth < 992) {
+        saidAct.style.cssText = `
+          margin-top: ${contentHeader}px;
+        `;
+        contentMain.style.cssText = `
+          margin-top: ${contentHeader}px;
+          height: calc( 100% - ${contentHeader}px);
+        `
+      }
     }
   };
   addMarg()
@@ -167,25 +178,26 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
         max-height: ${blockHeight - 6}px;
       `
     })
-
-
   };
   tabHeight();
 
 
+  const 
+    contract = document.querySelector('.contract'),
+    setting = document.querySelector('.setting');
+
   // Табы
-  const tabs = () => {
-    const tabHeader = document.querySelector('.contract-header'),
-      tabs = tabHeader.querySelectorAll('.contract-header__tab'),
+  const tabs = (blockClass, headerClass, containerClass, tabClass, contains, containerBox) => {
+    const tabHeader = document.querySelector(headerClass),
+      tabs = tabHeader.querySelectorAll(tabClass),
       heightWindow = window.innerHeight,
-      tabContent = document.querySelectorAll('.contract-tab'),
-      contractTop = document.querySelector('.contract').offsetTop,
-      contractTab = document.querySelectorAll('.contract-tab__box'),
+      tabContent = document.querySelectorAll(containerClass),
+      contractTop = document.querySelector(blockClass).offsetTop,
+      contractTab = document.querySelectorAll(containerBox),
       tabHeaderTop = tabHeader.offsetHeight;
 
     let height = heightWindow - contractTop - tabHeaderTop - 30;
 
-    if (tabHeader) {
       contractTab.forEach((i) => {
         i.style.cssText = `
           height: 100%;
@@ -211,7 +223,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
       tabHeader.addEventListener('click', (e) => {  
 
         let target = e.target;
-        if (target.classList.contains('contract-header__tab')) {
+        if (target.classList.contains(contains)) {
           tabs.forEach((item, i) => {
             if (item === target) {
               toggleTabContent(i);
@@ -221,8 +233,17 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
 
 
       })
-    }
+    
   };
-  tabs();
+
+  if (contract){
+    tabs('.contract', '.contract-header', '.contract-tab', '.contract-header__tab', 'contract-header__tab', '.contract-tab__box');
+  }
+
+  if (setting){
+    tabs('.setting', '.setting-header', '.contract-tab', '.setting-header__tab', 'setting-header__tab', '.contract-tab__box');
+  }
+
+  
 
 });
