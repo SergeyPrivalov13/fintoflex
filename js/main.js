@@ -65,9 +65,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
             elem.classList.add('active')
           }
         }
-
       }
-
 
       // Меню
 
@@ -88,14 +86,17 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
           btn.classList.add('cls');
           saidbar.classList.add('active');
           body.classList.add('atv');
-        }
-  
-        // Закрывает select если кликнули мимо
-        const selectSingle = document.querySelector('.__select');
-        if (selectSingle) {
-          if (!target.closest('.__select__content') && !target.closest('.__select__title')) {
-            selectSingle.setAttribute('data-state', '');
-          }
+        }  
+      }
+
+      // Закрывает select если кликнули мимо
+      const selectSingle = document.querySelector('.__select');
+
+      if (selectSingle) {
+        if (!target.closest('.__select__content') && !target.closest('.__select__title')) {
+          console.log(selectSingle);
+          console.log(target);
+          selectSingle.setAttribute('data-state', '');
         }
       }
 
