@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
   const body = document.body;
   const screenWidth = window.screen.width;
   const screenW = body.clientWidth;
-  const screenH = body.clientHeight;  
+  const screenH = body.clientHeight;
 
   const progress = () => {
     const progress = document.querySelector('.gains-progress');
@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
       // Появление блока оповещения
       const substrate = document.querySelector('.substrate');
 
-      if(elem) {
+      if (elem) {
         if (screenWidth < 992) {
           if (target.closest('#bell')) {
             elem.classList.toggle('active');
@@ -48,21 +48,21 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
             substrate.classList.remove('active');
             body.classList.remove('active');
           }
-  
+
           if (target.closest('.bell__container')) {
             elem.classList.add('active');
             substrate.classList.add('active');
             body.classList.add('active');
           }
-  
-  
+
+
         } else {
           if (target.closest('#bell')) {
             elem.classList.toggle('active');
           } else {
             elem.classList.remove('active');
           }
-  
+
           if (target.closest('.bell__container')) {
             elem.classList.add('active')
           }
@@ -74,21 +74,29 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
       const btn = document.querySelector('.burger');
       const saidbar = document.querySelector('.saidbar');
 
-      if(saidbar) {
+      if (saidbar) {
+        
         if (target.closest('.burger')) {
           btn.classList.toggle('cls');
           saidbar.classList.toggle('active');
-          body.classList.toggle('atv');
+          body.classList.toggle('atv')
+
+          if(screenW <= 576) {
+            body.classList.toggle('bg');
+          }
+
         } else {
-          btn.classList.remove('cls');
-          saidbar.classList.remove('active');
-          body.classList.remove('atv');
+          if (target.closest('.saidbar')) {
+          } else {
+            btn.classList.remove('cls');
+            saidbar.classList.remove('active');
+            body.classList.remove('atv');
+
+            if(screenW <= 576) {
+              body.classList.remove('bg');
+            }
+          }
         }
-        if (target.closest('.saidbar')) {
-          btn.classList.add('cls');
-          saidbar.classList.add('active');
-          body.classList.add('atv');
-        }  
       }
 
       // Закрывает select если кликнули мимо
@@ -96,19 +104,16 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
 
       if (selectSingle) {
         if (!target.closest('.__select__content') && !target.closest('.__select__title')) {
-          console.log(selectSingle);
-          console.log(target);
           selectSingle.setAttribute('data-state', '');
         }
       }
-
     })
   };
   addClass();
 
   const houseContent = () => {
     const houseContent = document.querySelector('.house-content');
-    
+
     if (houseContent) {
       const contentHeader = document.querySelector('.content__header').clientHeight;
       houseContent.style.cssText = `
@@ -120,8 +125,8 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
 
   const addMarg = () => {
     const saidAct = document.querySelector('.saidbar');
-    
-    if(saidAct){
+
+    if (saidAct) {
       const contentMain = document.querySelector('.content-main');
       const contentHeader = document.querySelector('.content__header').clientHeight;
 
@@ -184,12 +189,12 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
     })
   };
 
-  if(screenW > 992) {
+  if (screenW > 992) {
     tabHeight();
   }
 
 
-  const 
+  const
     contract = document.querySelector('.contract'),
     setting = document.querySelector('.setting');
 
@@ -205,49 +210,49 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
 
     let height = heightWindow - contractTop - tabHeaderTop - 30;
 
-      contractTab.forEach((i) => {
-        i.style.cssText = `
+    contractTab.forEach((i) => {
+      i.style.cssText = `
           height: 100%;
           overflow-y: auto;
           max-height: ${height}px;
           `
-      })
+    })
 
-      const toggleTabContent = (index) => {
-        for (let i = 0; i < tabContent.length; i++) {
-          if (index === i) {
-            tabs[i].classList.add('active');
-            tabContent[i].classList.remove('active-none');
-            tabContent[i].classList.add('active');
-          } else {
-            tabs[i].classList.remove('active');
-            tabContent[i].classList.remove('active');
-            tabContent[i].classList.add('active-none');
+    const toggleTabContent = (index) => {
+      for (let i = 0; i < tabContent.length; i++) {
+        if (index === i) {
+          tabs[i].classList.add('active');
+          tabContent[i].classList.remove('active-none');
+          tabContent[i].classList.add('active');
+        } else {
+          tabs[i].classList.remove('active');
+          tabContent[i].classList.remove('active');
+          tabContent[i].classList.add('active-none');
+        }
+      }
+    };
+
+    tabHeader.addEventListener('click', (e) => {
+
+      let target = e.target;
+      if (target.classList.contains(contains)) {
+        tabs.forEach((item, i) => {
+          if (item === target) {
+            toggleTabContent(i);
           }
-        }
-      };
-
-      tabHeader.addEventListener('click', (e) => {  
-
-        let target = e.target;
-        if (target.classList.contains(contains)) {
-          tabs.forEach((item, i) => {
-            if (item === target) {
-              toggleTabContent(i);
-            }
-          });
-        }
+        });
+      }
 
 
-      })
-    
+    })
+
   };
 
-  if (contract){
+  if (contract) {
     tabs('.contract', '.contract-header', '.contract-tab', '.contract-header__tab', 'contract-header__tab', '.contract-tab__box');
   }
 
-  if (setting){
+  if (setting) {
     tabs('.setting', '.setting-header', '.setting-tab', '.setting-header__tab', 'setting-header__tab', '.setting-tab__box');
   }
 
@@ -272,7 +277,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
       }
     };
 
-    tabHeader.addEventListener('click', (e) => {  
+    tabHeader.addEventListener('click', (e) => {
 
       let target = e.target;
       if (target.classList.contains('finance-header_tab')) {
@@ -288,19 +293,19 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
 
   };
 
-  if(financeBox){
+  if (financeBox) {
     tab2();
   }
-  
+
   const checkbox = () => {
     const check = document.getElementById('check');
     const text = document.querySelector('.check__text');
     check.addEventListener('change', () => {
-      if(check.checked) {
-        text.innerHTML= 'Тёмная тема';
+      if (check.checked) {
+        text.innerHTML = 'Тёмная тема';
         body.classList.add('__white');
       } else {
-        text.innerHTML= 'Светлая тема';
+        text.innerHTML = 'Светлая тема';
         body.classList.remove('__white');
       }
     })

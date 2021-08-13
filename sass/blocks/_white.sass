@@ -1,6 +1,13 @@
 body
   &.__white
     background: #E5E5E5
+    &.bg
+      .content__header
+        transition: .4s
+        background: $white
+
+    p
+      color: #434343
 
     ::-webkit-scrollbar
       width: 12px
@@ -42,11 +49,6 @@ body
         svg
           fill: #575757
 
-    .saidbar
-      background: $white
-      &::after
-        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.06) 71.01%, rgba(255, 255, 255, 0) 99.52%)
-
     .user
       &__text
         p
@@ -68,6 +70,10 @@ body
           color: #78808D
 
     .saidbar
+      background: $white
+      &::after
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.06) 71.01%, rgba(255, 255, 255, 0) 99.52%)
+
       &__settings
         &.saidbar-active
           a
@@ -110,10 +116,20 @@ body
 
     .gains
       background: #FAFAFA
+      &-progress
+        background: #DDE7FF
+        color: #15172e
+        border: 1px solid #DDE7FF
+        &:hover
+          background: #DDE7FF
+          color: #15172e
       &-rank
         &__header
           p
             color: #434343
+        &__img
+          border: 1px solid #D1D1D1
+          box-shadow: 0px 0px 14px 1px #B3B3B3
 
     .level
       &__text
@@ -171,21 +187,13 @@ body
       border: 1px solid #DDE7FF
       +mon4
       &.transp
-        background: #F7F8FA
+        background: transparent
         border: 1px solid #666A6F
-
-    .gains
-      &-progress
-        background: #DDE7FF
-        color: #15172e
-        border: 1px solid #DDE7FF
+        transition: .4s
+        color: #15172E
         &:hover
+          border: 1px solid #DDE7FF
           background: #DDE7FF
-          color: #15172e
-      &-rank
-        &__img
-          border: 1px solid #D1D1D1
-          box-shadow: 0px 0px 14px 1px #B3B3B3
 
     .bell
       &__container
@@ -208,6 +216,164 @@ body
           width: 4px
           height: 4px
 
+    .modal
+      background: #FAFAFA
+      box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.04)
+      &__ok
+        svg
+          fill: #6278AF
+      &__text
+        color: #434343
+      &__info
+        color: #434343
+      &__name
+        color: #434343
+      &__sum
+        background: linear-gradient(180deg, #8569F9 0%, #B7A7FC 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+      &__button
+        background: #7635FF
+        color: $white
+
+    .breadcrumb
+      &__item
+        color: #434343
+        a
+          color: #434343
+        &::after
+          background: url(../img/svg/icon_arrow_white.svg) center no-repeat
+
+    .information
+      &-block
+        &__left
+          p
+            color: #434343
+            +mon7
+        &__right
+          color: rgba(0, 0, 0, 0.53)
+          +mon7
+          &.retail
+            color: #434343
+            +mon7
+
+          &.wht
+            color: #434343
+            +mon7
+          &.pnk
+            background: linear-gradient(180deg, #8569F9 0%, #B7A7FC 100%)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            +mon7
+        &__item.dep
+          .information
+            &-block
+              &__right
+                background: linear-gradient(180deg, #8569F9 0%, #B7A7FC 100%)
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+
+    .__input
+      color: #15172E
+      background: $white
+      box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.04)
+
+    .__select
+      &[data-state="active"]
+        .__select__title
+          border-radius: 18px 18px 0 0
+
+      &__title
+        background: $white
+        color: rgba(#15172E, 0.65)
+        +mon7
+        &::after, &::before
+          background: rgba(21, 23, 46, 0.85)
+        &.act
+          color: rgba(#15172E, 1)
+          +mon5
+
+      &__content
+        &::after, &::before
+          background: $white
+
+      &__label
+        color: #15172E
+        z-index: 1
+        &::after
+          background: linear-gradient(90deg, rgba(255, 198, 198, 0) 0%, rgba(21, 23, 46, 0.17) 51.84%, rgba(255, 255, 255, 0) 99.52%)
+        &:hover
+          background: linear-gradient(90deg, rgba(78, 88, 211, 0.07) 0%, rgba(196, 196, 196, 0) 78.12%)
+
+      &__input
+        &:checked+label
+          background: linear-gradient(90deg, rgba(78, 88, 211, 0.07) 0%, rgba(196, 196, 196, 0) 78.12%)
+
+    .table
+      &-box
+        &__container
+          background: #FFFFFF
+          box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.04)
+        &__item
+          &::after
+            opacity: 0.19
+          &.head
+            p
+              color: #636363
+              +mon7
+        &__total
+          span
+            background: linear-gradient(180deg, #8569F9 0%, #B7A7FC 100%)
+            -webkit-background-clip: text
+        &__button
+          +mon7
+
+    input::-webkit-input-placeholder
+      color: rgba(#15172E, 0.65)
+      +mon7
+    input::-moz-placeholder
+      color: rgba(#15172E, 0.65)
+      +mon7
+    input:-moz-placeholder
+      color: rgba(#15172E, 0.65)
+      +mon7
+    input:-ms-input-placeholder
+      color: rgba(#15172E, 0.65)
+      +mon7
+
+    .subtitle
+      color: #434343
+
+    .contarct
+      &__item
+        background: #FAFAFA
+      &__box
+        &::-webkit-scrollbar
+          width: 6px
+          height: 6px
+      &__title
+        color: #8569F9
+        &.__pink
+          background: linear-gradient(180deg, #8569F9 0%, #B7A7FC 100%)
+          -webkit-background-clip: text
+          -webkit-text-fill-color: transparent
+
+      &__left
+        color: #636363
+      &__right
+        color: #434343
+        +mon7
+      &__total
+        background: linear-gradient(180deg, #8569F9 0%, #B7A7FC 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+
+    .market
+      &__content
+        p
+          &:first-child
+            color: #15172E
+
 @media screen and ( max-width: 992px )
   body
     &.__white
@@ -221,3 +387,7 @@ body
       ::-webkit-scrollbar
         width: 6px
         height: 6px
+      .saidbar
+        &.active
+          .content__header
+            background: $white

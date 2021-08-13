@@ -53,16 +53,16 @@
         </div>
 
         <div class="logo">
-          <a class= "logo_dark" href="">
+          <a class="logo_dark" href="">
             <img src="img/main/logo.svg" alt="fintoflex">
           </a>
-          <a class= "logo_white" href="">
+          <a class="logo_white" href="">
             <img src="img/main/logo_white.svg" alt="fintoflex">
           </a>
-        </div> 
+        </div>
 
         <ul class="menu">
-          <li>
+          <li class="menu-active">
             <a href="">
               <svg width="28" height="21" viewBox="0 0 28 21" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -95,7 +95,7 @@
               Мои активы
             </a>
           </li>
-          <li class="menu-active">
+          <li>
             <a href="">
               <svg width="24" height="22" viewBox="0 0 24 22" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -148,14 +148,14 @@
           </label>
         </div>
 
-        <div class="logo">
-          <a class= "logo_dark" href="">
+        <div class="saidbar__logo">
+          <a class="logo_dark" href="">
             <img src="img/main/logo.svg" alt="fintoflex">
           </a>
-          <a class= "logo_white" href="">
+          <a class="logo_white" href="">
             <img src="img/main/logo_white.svg" alt="fintoflex">
           </a>
-        </div> 
+        </div>
 
         <a class="saidbar__lang">Rus</a>
 
@@ -172,8 +172,10 @@
           <div id="bell" class="notification__block">
             <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M17.6667 7.8C17.6667 4.04446 14.6819 1 11 1C7.3181 1 4.33333 4.04446 4.33333 7.8C4.33333 15.7333 1 18 1 18H21C21 18 17.6667 15.7333 17.6667 7.8Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M13 22.0018C12.5864 22.6186 11.8244 22.9982 11 22.9982C10.1756 22.9982 9.41364 22.6186 9 22.0018" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                d="M17.6667 7.8C17.6667 4.04446 14.6819 1 11 1C7.3181 1 4.33333 4.04446 4.33333 7.8C4.33333 15.7333 1 18 1 18H21C21 18 17.6667 15.7333 17.6667 7.8Z"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M13 22.0018C12.5864 22.6186 11.8244 22.9982 11 22.9982C10.1756 22.9982 9.41364 22.6186 9 22.0018"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
 
             <span></span>
@@ -221,75 +223,78 @@
           <li class="breadcrumb__item">Оплата авто</li>
         </ul>
 
-        <button class="button transp __back">< Назад</button>
+        <button class="button transp __back">
+          < Назад</button> <div class="modal __bk">
+            <div class="modal__text m-4">Вы покупаете</div>
 
-        <div class="modal __bk">
-          <div class="modal__text m-4">Вы покупаете</div>
+            <div class="modal__ok">
+              <svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M26 0C11.684 0 0 11.6847 0 26C0 40.3164 11.6847 52 26 52C40.3162 52 52 40.3153 52 26C52 11.684 40.3153 0 26 0ZM26 6.19531C35.8844 6.19531 44.1004 13.4741 45.5703 22.9531H40.2871C36.9374 22.9531 33.7548 21.6089 31.5555 19.2653C28.5492 16.0614 23.4511 16.0604 20.4445 19.2652C18.2452 21.6089 15.0626 22.9531 11.7128 22.9531H6.42972C7.89963 13.4741 16.1156 6.19531 26 6.19531ZM26 32.0938C23.48 32.0938 21.4297 30.0436 21.4297 27.5234C21.4297 25.0033 23.48 22.9531 26 22.9531C28.5202 22.9531 30.5703 25.0033 30.5703 27.5234C30.5703 30.0436 28.5202 32.0938 26 32.0938ZM7.55828 33.2208C9.30211 32.5367 10.5613 32.0938 12.2891 32.0938C17.8433 32.0938 22.1629 37.0433 21.3262 42.6045H21.3226C21.1983 43.4556 20.9538 44.2804 20.601 45.0567C14.6333 43.3636 9.80393 38.9363 7.55828 33.2208ZM31.4002 45.0563C31.0378 44.2595 30.7985 43.4348 30.6774 42.6045H30.6738C29.6989 36.1243 35.6809 30.7773 41.8816 32.3531C42.5353 32.5193 43.3533 32.7939 44.4416 33.2209C42.1962 38.9359 37.3673 43.363 31.4002 45.0563Z"
+                   />
+              </svg>
+            </div>
 
-          <div class="modal__ok">
-            <img src="img/svg/icon_auto.svg" alt="auto">
-          </div>
+            <p class="modal__name">Cadillac Escalade 2012</p>
 
-          <p class="modal__name">Cadillac Escalade 2012</p>
+            <div class="information-block m-4">
+              <div class="information-block__item">
+                <div class="information-block__left">
+                  <p>Розничная стоимость</p>
+                </div>
 
-          <div class="information-block m-4">
-            <div class="information-block__item">
-              <div class="information-block__left">
-                <p>Розничная стоимость</p>
+                <div class="information-block__right retail">
+                  132 900 FLEX
+                </div>
+
+              </div>
+              <div class="information-block__item">
+                <div class="information-block__left">
+                  <p>Стоимость контракта</p>
+                </div>
+
+                <div class="information-block__right pnk">
+                  10 000 FLEX
+                </div>
+
               </div>
 
-              <div class="information-block__right retail">
-                132 900 FLEX
+              <div class="information-block__item">
+                <div class="information-block__left">
+                  <p>USDT </p>
+                  <div class="information-block__hr"></div>
+                </div>
+
+                <div class="information-block__right wht">
+                  3 900 USDT
+                </div>
+
+              </div>
+
+              <div class="information-block__item">
+                <div class="information-block__left">
+                  <p>BTC</p>
+                  <div class="information-block__hr"></div>
+                </div>
+
+                <div class="information-block__right wht">
+                  0.01232553
+                </div>
+
               </div>
 
             </div>
-            <div class="information-block__item">
-              <div class="information-block__left">
-                <p>Стоимость контракта</p>
-              </div>
 
-              <div class="information-block__right pnk">
-                10 000 FLEX
-              </div>
+            <p class="modal__text">Сумма к оплате</p>
+            <p class="modal__sum">62 900 <span>FLEX</span></p>
 
-            </div>
-
-            <div class="information-block__item">
-              <div class="information-block__left">
-                <p>USDT </p>
-                <div class="information-block__hr"></div>
-              </div>
-
-              <div class="information-block__right wht">
-                3 900 USDT
-              </div>
-
-            </div>
-
-            <div class="information-block__item">
-              <div class="information-block__left">
-                <p>BTC</p>
-                <div class="information-block__hr"></div>
-              </div>
-
-              <div class="information-block__right wht">
-                0.01232553
-              </div>
-
-            </div>
-
-          </div>
-
-          <p class="modal__text">Сумма к оплате</p>
-          <p class="modal__sum">62 900 <span>FLEX</span></p>
-
-          <button class="button modal__button">Оплатить</button>
-        </div>
-
-
+            <button class="button modal__button">Оплатить</button>
       </div>
 
+
     </div>
+
+  </div>
   </div>
 
 
