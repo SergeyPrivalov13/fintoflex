@@ -27,7 +27,7 @@
 
     <div class="saidbar">
       <div class="saidbar__header">
-        
+
         <div class="user mob">
           <div class="user__block">
             <div class="user__img">
@@ -53,12 +53,13 @@
         </div>
 
         <div class="logo">
-          <a href="">
+          <a class="logo_dark" href="">
             <img src="img/main/logo.svg" alt="fintoflex">
           </a>
+          <a class="logo_white" href="">
+            <img src="img/main/logo_white.svg" alt="fintoflex">
+          </a>
         </div>
-
-        
 
         <ul class="menu">
           <li class="menu-active">
@@ -141,15 +142,18 @@
 
         <div class="saidbar__checkbox">
           <label class="check">
-            <input class="check__input" type="checkbox">
+            <input id="check" class="check__input" type="checkbox">
             <span class="check__box"></span>
-            Светлая тема
+            <span class="check__text">Светлая тема</span>
           </label>
         </div>
 
         <div class="saidbar__logo">
-          <a href="">
+          <a class="logo_dark" href="">
             <img src="img/main/logo.svg" alt="fintoflex">
+          </a>
+          <a class="logo_white" href="">
+            <img src="img/main/logo_white.svg" alt="fintoflex">
           </a>
         </div>
 
@@ -166,7 +170,12 @@
           <a class="language">RUS</a>
 
           <div id="bell" class="notification__block">
-            <img src="img/main/icon_bell.svg" alt="bell">
+            <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M17.6667 7.8C17.6667 4.04446 14.6819 1 11 1C7.3181 1 4.33333 4.04446 4.33333 7.8C4.33333 15.7333 1 18 1 18H21C21 18 17.6667 15.7333 17.6667 7.8Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M13 22.0018C12.5864 22.6186 11.8244 22.9982 11 22.9982C10.1756 22.9982 9.41364 22.6186 9 22.0018" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
             <span></span>
           </div>
         </div>
@@ -207,12 +216,12 @@
       <div class="content-main">
         <h3 class="title">Привет, Константин</h3>
 
-        <div class="content-main__gains">
+        <div class="content-main__gains ">
           <div class="gains">
             <div class="gains-rank">
               <div class="gains-rank__header">
                 <div class="gains-rank__img">
-                  <img src="img/rank/rank.png" alt="rank">
+                  <img src="img/rank/rank.svg" alt="rank">
                 </div>
                 <p>Серебрянный <br> менеджер</p>
               </div>
@@ -224,7 +233,7 @@
                   <div class="level__box">
                     <div class="level__left">
                       <div class="level__img">
-                        <img src="img/rank/level_1.png" alt="level">
+                        <img src="img/rank/level_1.svg" alt="level">
                       </div>
 
                       <div class="level__text">
@@ -255,7 +264,7 @@
                 <div class="level__box">
                   <div class="level__left">
                     <div class="level__img">
-                      <img src="img/rank/level_2.png" alt="level">
+                      <img src="img/rank/level_2.svg" alt="level">
                     </div>
 
                     <div class="level__text more">
@@ -282,7 +291,7 @@
                 <div class="level__box">
                   <div class="level__left">
                     <div class="level__img">
-                      <img src="img/rank/level_3.png" alt="level">
+                      <img src="img/rank/level_3.svg" alt="level">
                     </div>
 
                     <div class="level__text more">
@@ -309,7 +318,7 @@
                 <div class="level__box">
                   <div class="level__left">
                     <div class="level__img">
-                      <img src="img/rank/level_4.png" alt="level">
+                      <img src="img/rank/level_4.svg" alt="level">
                     </div>
 
                     <div class="level__text more">
@@ -336,7 +345,7 @@
                 <div class="level__box">
                   <div class="level__left">
                     <div class="level__img">
-                      <img src="img/rank/level_5.png" alt="level">
+                      <img src="img/rank/level_5.svg" alt="level">
                     </div>
 
                     <div class="level__text more">
@@ -411,80 +420,80 @@
                   <div class="profitability-footer__img">
                     <img src="img/flex/flex_1.png" alt="">
                   </div>
-  
+
                   <div>
                     <p class="profitability-footer__title"><span>flex</span> MARKET</p>
                     <span class="profitability-footer__subtitle">Выгода до 50% от стоимости</span>
-  
+
                     <div class="profitability-footer__content">
                       <p>Лимит покупки</p>
                       <span>20 000 FX$</span>
                     </div>
-  
+
                     <span class="profitability-footer__property">В собственности через 120-180 дней</span>
-  
+
                   </div>
-  
+
                   <button class="button profitability-footer__button">Подробнее</button>
                 </div>
                 <div class="profitability-footer__item">
                   <div class="profitability-footer__img auto">
                     <img src="img/flex/auto.png" alt="">
                   </div>
-  
+
                   <div>
                     <p class="profitability-footer__title"><span>flex</span> AUTO</p>
                     <span class="profitability-footer__subtitle">Выгода до 50% от стоимости</span>
-  
+
                     <div class="profitability-footer__content">
                       <p>Лимит покупки</p>
                       <span>400 000 FX$</span>
                     </div>
-  
+
                     <span class="profitability-footer__property">В собственности через 120-180 дней</span>
-  
+
                   </div>
-  
+
                   <button class="button profitability-footer__button">Подробнее</button>
                 </div>
                 <div class="profitability-footer__item">
                   <div class="profitability-footer__img home">
                     <img src="img/flex/flex_3.png" alt="">
                   </div>
-  
+
                   <div>
                     <p class="profitability-footer__title"><span>flex</span> HOME</p>
                     <span class="profitability-footer__subtitle">Выгода до 50% от стоимости</span>
-  
+
                     <div class="profitability-footer__content">
                       <p>Лимит покупки</p>
                       <span>1 500 000 FX$</span>
                     </div>
-  
+
                     <span class="profitability-footer__property">В собственности через 120-180 дней</span>
-  
+
                   </div>
-  
+
                   <button class="button profitability-footer__button">Подробнее</button>
                 </div>
                 <div class="profitability-footer__item">
                   <div class="profitability-footer__img chk">
                     <img src="img/flex/flex_4.png" alt="">
                   </div>
-  
+
                   <div>
                     <p class="profitability-footer__title"><span>flex</span> MARKET</p>
                     <span class="profitability-footer__subtitle">Выгода до 50% от стоимости</span>
-  
+
                     <div class="profitability-footer__content">
                       <p>Лимит покупки</p>
                       <span>1 500 000 FLEX</span>
                     </div>
-  
+
                     <span class="profitability-footer__property">В собственности через 120-180 дней</span>
-  
+
                   </div>
-  
+
                   <button class="button profitability-footer__button">Подробнее</button>
                 </div>
               </div>

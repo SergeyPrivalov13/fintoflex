@@ -1,6 +1,18 @@
 body
   &.__white
     background: #E5E5E5
+
+    ::-webkit-scrollbar
+      width: 12px
+      height: 12px
+
+    ::-webkit-scrollbar-track
+      background: rgba(56, 62, 73, 0.07)
+
+    ::-webkit-scrollbar-thumb
+      background: rgba(192, 192, 192, 0.46)
+      border: 2px solid rgba(56, 62, 73, 0.07)
+
     .content__header
       background: #E5E5E5
     .title
@@ -21,9 +33,9 @@ body
             svg
               fill: #575757
         a
-          color: #929292          
+          color: #929292
           &:hover
-            +mon5      
+            +mon5
             color: #575757
             svg
               fill: #575757
@@ -32,13 +44,180 @@ body
 
     .saidbar
       background: $white
-      &::after 
-        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.06) 71.01%, rgba(255, 255, 255, 0) 99.52%);
+      &::after
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.06) 71.01%, rgba(255, 255, 255, 0) 99.52%)
 
     .user
       &__text
         p
           color: #15172E
           +mon5
-    
 
+    .logo
+      &_dark
+        display: none
+      &_white
+        display: block
+
+    .check
+      &__box
+        background: #d1d1d1
+      &__text
+        color: #78808D
+        &:hover
+          color: #78808D
+
+    .saidbar
+      &__settings
+        &.saidbar-active
+          a
+            color: #575757
+            &::after
+              left: 1px
+              opacity: 0.6
+            &:hover
+              color: #575757
+              svg
+                fill: #575757
+
+            svg
+              fill: #575757
+        a
+          color: #929292
+          &:hover
+            +mon5
+            color: #575757
+            svg
+              fill: #575757
+        svg
+          fill: #575757
+
+    .language
+      color: #15172E
+
+    .notification
+      &__block
+        svg
+          stroke: #1B1B1B
+
+    .exit
+      svg
+        fill: #15172E
+
+    .burger
+      span
+        background: #15172E
+
+    .gains
+      background: #FAFAFA
+      &-rank
+        &__header
+          p
+            color: #434343
+
+    .level
+      &__text
+        p
+          color: #1B1B1B
+        span
+          color: #78808D
+      &__right
+        p
+          color: #1B1B1B
+        span
+          color: #15172E
+
+    .progress
+      &-bg
+        background: #DDE7FF
+      &-bar
+        background: linear-gradient(180deg, #DDE7FF 0%, #F3F7FF 100%)
+        filter: drop-shadow(0px 0px 11px rgba(0, 0, 0, 0.04))
+
+    .profitability
+      &-header
+        &__item
+          background: #FAFAFA
+          span
+            color: #1B1B1B
+          p
+            background: linear-gradient(180deg, #CDCDCD 0%, #272727 100%)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+
+          &.active
+            p
+              background: linear-gradient(45.04deg, #FFD6EF -35.82%, #DF45A3 100.3%)
+              -webkit-background-clip: text
+              -webkit-text-fill-color: transparent
+
+      &-footer
+        &__item
+          background: linear-gradient(180deg, #DDE7FF 0%, #F3F7FF 100%)
+
+        &__title, &__subtitle
+          color: #1B1B1B
+        &__content
+          p
+            color: #78808D
+          span
+            color: #3F3F3F
+        &__property
+          color: #78808D
+
+    .button
+      background: #DDE7FF
+      color: #15172e
+      border: 1px solid #DDE7FF
+      +mon4
+      &.transp
+        background: #F7F8FA
+        border: 1px solid #666A6F
+
+    .gains
+      &-progress
+        background: #DDE7FF
+        color: #15172e
+        border: 1px solid #DDE7FF
+        &:hover
+          background: #DDE7FF
+          color: #15172e
+      &-rank
+        &__img
+          border: 1px solid #D1D1D1
+          box-shadow: 0px 0px 14px 1px #B3B3B3
+
+    .bell
+      &__container
+        background: #e5e5e5
+      &__text
+        p, span
+          color: #15172E
+      &__flex
+        color: #15172E
+      &__item
+        &::after
+          background: #B3B3B3
+          opacity: 0.3
+        &:last-child
+          &::after
+            display: none
+
+      &__message
+        &::-webkit-scrollbar
+          width: 4px
+          height: 4px
+
+@media screen and ( max-width: 992px )
+  body
+    &.__white
+      ::-webkit-scrollbar
+        width: 8px
+        height: 8px
+
+@media screen and ( max-width: 576px )
+  body
+    &.__white
+      ::-webkit-scrollbar
+        width: 6px
+        height: 6px

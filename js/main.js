@@ -3,6 +3,8 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
 
   const body = document.body;
   const screenWidth = window.screen.width;
+  const screenW = body.clientWidth;
+  const screenH = body.clientHeight;  
 
   const progress = () => {
     const progress = document.querySelector('.gains-progress');
@@ -131,6 +133,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
         contentMain.style.cssText = `
           margin-top: ${contentHeader}px;
           height: calc( 100% - ${contentHeader}px);
+          overflow-y: auto;
         `
       }
     }
@@ -180,7 +183,10 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
       `
     })
   };
-  tabHeight();
+
+  if(screenW > 992) {
+    tabHeight();
+  }
 
 
   const 
@@ -246,6 +252,59 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
   }
 
 
+  const financeBox = document.querySelector('.finance-box');
+  const tab2 = () => {
+    const tabHeader = document.querySelector('.finance-header'),
+      tabs = tabHeader.querySelectorAll('.finance-header_tab'),
+      tabContent = document.querySelectorAll('.finance-tab');
+
+    const toggleTabContent = (index) => {
+      for (let i = 0; i < tabContent.length; i++) {
+        if (index === i) {
+          tabs[i].classList.add('active');
+          tabContent[i].classList.remove('active-none');
+          tabContent[i].classList.add('active');
+        } else {
+          tabs[i].classList.remove('active');
+          tabContent[i].classList.remove('active');
+          tabContent[i].classList.add('active-none');
+        }
+      }
+    };
+
+    tabHeader.addEventListener('click', (e) => {  
+
+      let target = e.target;
+      if (target.classList.contains('finance-header_tab')) {
+        tabs.forEach((item, i) => {
+          if (item === target) {
+            toggleTabContent(i);
+          }
+        });
+      }
+
+
+    })
+
+  };
+
+  if(financeBox){
+    tab2();
+  }
   
+  const checkbox = () => {
+    const check = document.getElementById('check');
+    const text = document.querySelector('.check__text');
+    check.addEventListener('change', () => {
+      if(check.checked) {
+        text.innerHTML= 'Тёмная тема';
+        body.classList.add('__white');
+      } else {
+        text.innerHTML= 'Светлая тема';
+        body.classList.remove('__white');
+      }
+    })
+  };
+  checkbox();
 
 });

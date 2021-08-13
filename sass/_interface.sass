@@ -13,6 +13,7 @@ body
   text-align: left
   background-color: $gray-dark
   cursor: default
+  transition: .1s
   +mon4
   &.atv
     overflow: hidden
@@ -44,6 +45,7 @@ body
 
 ::-webkit-scrollbar
   width: 12px
+  height: 12px
 
 ::-webkit-scrollbar-track
   background: rgba(56, 62, 73, 0.56)
@@ -76,7 +78,7 @@ ul
 
 .title
   margin: 0
-  margin-bottom: 46px
+  margin-bottom: 36px
   font-size: 25px
   line-height: 30px
   color: $gray2
@@ -140,3 +142,6 @@ ul
     line-height: 17px
   .block-subtile
     margin-bottom: 24px
+  :-webkit-scrollbar
+    width: 6px
+    height: 6px
