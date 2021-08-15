@@ -121,8 +121,44 @@ ul
 .box-overflow
   height: 100%
   overflow-y: auto
+  
+
+.block-overflow
+  padding-bottom: 30px
+  &.__padding
+    padding-right: 40px
+  &.__cashback
+    padding-bottom: 0
+
+.__padding
+  padding-right: 40px
+.__pab-bot-none
+  padding-bottom: 0 !important
+
+@media screen and ( max-width: 1200px )
+  .__padding
+    padding-right: 24px
+  .block-overflow
+    &.__padding
+      padding-right: 24px
+
+
+@media screen and ( max-width: 768px )
+  .block-overflow
+    margin-right: 0px
+  .__padding
+    padding-right: 26px
+  .block-overflow
+    &.__padding
+      padding-right: 26px
 
 @media screen and ( max-width: 576px )
+  .block-overflow
+    padding-bottom: 15px
+    &.__padding
+      padding-right: 15px
+  .__padding
+    padding-right: 15px
   .subtitle
     font-size: 16px
     line-height: 18px
@@ -145,3 +181,4 @@ ul
   :-webkit-scrollbar
     width: 6px
     height: 6px
+  

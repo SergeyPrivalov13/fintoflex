@@ -1,10 +1,13 @@
 window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки DOM дерева 
   'use strict';
 
-  const body = document.body;
-  const screenWidth = window.screen.width;
-  const screenW = body.clientWidth;
-  const screenH = body.clientHeight;
+  const body = document.body,
+    screenWidth = window.screen.width,
+    screenW = body.clientWidth,
+    screenH = body.clientHeight,
+    widthWindow = window.innerWidth,
+    saidbar = document.querySelector('.saidbar');
+
 
   const progress = () => {
     const progress = document.querySelector('.gains-progress');
@@ -71,28 +74,30 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
 
       // Меню
 
-      const btn = document.querySelector('.burger');
-      const saidbar = document.querySelector('.saidbar');
+      const
+        btn = document.querySelector('.burger'),
+        saidbar = document.querySelector('.saidbar');
+
 
       if (saidbar) {
-        
+
         if (target.closest('.burger')) {
           btn.classList.toggle('cls');
           saidbar.classList.toggle('active');
-          body.classList.toggle('atv')
+          body.classList.toggle('atv');
 
-          if(screenW <= 576) {
+
+          if (screenW <= 576) {
             body.classList.toggle('bg');
           }
 
         } else {
-          if (target.closest('.saidbar')) {
-          } else {
+          if (target.closest('.saidbar')) {} else {
             btn.classList.remove('cls');
             saidbar.classList.remove('active');
             body.classList.remove('atv');
 
-            if(screenW <= 576) {
+            if (screenW <= 576) {
               body.classList.remove('bg');
             }
           }
@@ -143,7 +148,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
       }
     }
   };
-  addMarg()
+  //addMarg()
 
   const select = () => {
     const selectBox = document.querySelector('.select-box');
@@ -190,13 +195,64 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
   };
 
   if (screenW > 992) {
-    tabHeight();
+    //tabHeight();
   }
+
+  const blockHeight = () => {
+    const
+      blockOverflow = document.querySelector('.block-overflow');
+
+    if (blockOverflow) {
+
+      const
+        blockTop = document.querySelector('.block-overflow').offsetTop,
+        topMenuHeight = document.querySelector('.content__header').clientHeight,
+        heightWindow = window.innerHeight;
+
+      let heightBlock = heightWindow - blockTop;
+
+      if (heightWindow < 568) {
+        console.log(1);
+        blockOverflow.style.cssText = `    
+          height: 100%;    
+      `;
+      } else {
+
+        if (widthWindow > 992) {
+
+          blockOverflow.style.cssText = `       
+            overflow-y: auto;
+            height: ${heightBlock}px;  
+        `;
+
+        } else if (widthWindow <= 992 && widthWindow >= 576) {
+          saidbar.style.cssText = `
+            margin-top: ${topMenuHeight}px;
+          `;
+
+          blockOverflow.style.cssText = `      
+            overflow-y: auto;
+            height: ${heightBlock}px;  
+        `;
+        } else {
+          saidbar.style.cssText = `
+            margin-top: ${topMenuHeight}px;
+          `;
+
+          blockOverflow.style.cssText = `      
+            overflow-y: auto;
+            height: ${heightBlock}px;  
+        `;
+        }
+      }
+    }
+
+  }
+  blockHeight();
 
 
   const
-    contract = document.querySelector('.contract'),
-    setting = document.querySelector('.setting');
+    contract = document.querySelector('.contract');
 
   // Табы
   const tabs = (blockClass, headerClass, containerClass, tabClass, contains, containerBox) => {
@@ -204,19 +260,63 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
       tabs = tabHeader.querySelectorAll(tabClass),
       heightWindow = window.innerHeight,
       tabContent = document.querySelectorAll(containerClass),
-      contractTop = document.querySelector(blockClass).offsetTop,
-      contractTab = document.querySelectorAll(containerBox),
-      tabHeaderTop = tabHeader.offsetHeight;
+      contractTab = document.querySelectorAll(containerBox);
 
-    let height = heightWindow - contractTop - tabHeaderTop - 30;
 
-    contractTab.forEach((i) => {
-      i.style.cssText = `
-          height: 100%;
-          overflow-y: auto;
-          max-height: ${height}px;
-          `
-    })
+    const
+      topMenuHeight = document.querySelector('.content__header').clientHeight,
+      breadcrumb = document.querySelector('.breadcrumb').clientHeight,
+      blockSubtile = document.querySelector('.block-subtile').clientHeight,
+      tabHeight = document.querySelector('.contract-header').clientHeight,
+      contentHeader = document.querySelector('.content__header').clientHeight;
+
+    let hightTop = contentHeader + breadcrumb + blockSubtile + tabHeight + 40 + 14;
+
+    let height = heightWindow - hightTop;
+
+    if (topMenuHeight)
+
+      if (heightWindow < 568) {
+        console.log(1);
+        contractTab.forEach((i) => {
+          i.style.cssText = `
+            height: 100%;
+            overflow-y: auto;
+            max-height: 100%;
+            `
+        })
+
+      } else {
+
+        if (widthWindow > 992) {
+
+          contractTab.forEach((i) => {
+            i.style.cssText = `
+              height: 100%;
+              overflow-y: auto;
+              max-height: ${height - 106}px;
+              `
+          })
+
+
+        } else if (widthWindow <= 992) {
+
+          saidbar.style.cssText = `
+          margin-top: ${topMenuHeight}px;
+        `;
+
+          contractTab.forEach((i) => {
+            i.style.cssText = `
+              height: 100%;
+              overflow-y: auto;
+              max-height: ${height - 36}px;
+              `
+          })
+
+        }
+      }
+
+
 
     const toggleTabContent = (index) => {
       for (let i = 0; i < tabContent.length; i++) {
@@ -252,8 +352,93 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
     tabs('.contract', '.contract-header', '.contract-tab', '.contract-header__tab', 'contract-header__tab', '.contract-tab__box');
   }
 
+
+  const
+    setting = document.querySelector('.setting');
+  const tabsTwo = () => {
+    const
+      topMenu = document.querySelector('.content__header').clientHeight,
+      topMenuHeight = document.querySelector('.content__header').clientHeight,
+      tabHeader = document.querySelector('.setting-header'),
+      tabs = tabHeader.querySelectorAll('.setting-header__tab'),
+      heightWindow = window.innerHeight,
+      tabContent = document.querySelectorAll('.setting-tab'),
+      contractTab = document.querySelectorAll('.setting-tab__box');
+
+    let height = heightWindow;
+
+    if (heightWindow < 568) {
+      console.log(1);
+      contractTab.forEach((i) => {
+        i.style.cssText = `
+            height: 100%;
+            overflow-y: auto;
+            max-height: 100%;
+            `
+      })
+
+    } else {
+
+      if (widthWindow > 992) {
+
+        contractTab.forEach((i) => {
+          i.style.cssText = `
+              height: 100%;
+              overflow-y: auto;
+              max-height: ${height - 106}px;
+              `
+        })
+
+
+      } else if (widthWindow <= 992) {
+
+        saidbar.style.cssText = `
+          margin-top: ${topMenuHeight}px;
+        `;
+
+        contractTab.forEach((i) => {
+          i.style.cssText = `
+              height: 100%;
+              overflow-y: auto;
+              max-height: ${height - 36}px;
+              `
+        })
+
+      }
+    }
+
+    const toggleTabContent = (index) => {
+      for (let i = 0; i < tabContent.length; i++) {
+        if (index === i) {
+          tabs[i].classList.add('active');
+          tabContent[i].classList.remove('active-none');
+          tabContent[i].classList.add('active');
+        } else {
+          tabs[i].classList.remove('active');
+          tabContent[i].classList.remove('active');
+          tabContent[i].classList.add('active-none');
+        }
+      }
+    };
+
+    tabHeader.addEventListener('click', (e) => {
+
+      let target = e.target;
+      if (target.classList.contains('setting-header__tab')) {
+        tabs.forEach((item, i) => {
+          if (item === target) {
+            toggleTabContent(i);
+          }
+        });
+      }
+
+
+    })
+
+  };
+
   if (setting) {
-    tabs('.setting', '.setting-header', '.setting-tab', '.setting-header__tab', 'setting-header__tab', '.setting-tab__box');
+    tabsTwo();
   }
 
 

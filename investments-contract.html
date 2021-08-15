@@ -222,126 +222,130 @@
           <li class="breadcrumb__item">Создание контракта</li>
         </ul>
 
-        
-        <div class="create-contract">
-          <p class="create-contract__text">Укажите название товара и его разничную стоимость в магазинах, чтобы мы могли
-            покрыть часть расходов</p>
-
-          <div class="select-box">
-            <div class="__select" data-state="">
-              <div class="__select__title" data-default="Option 0">Выберите контракт</div>
-              <div class="__select__content">
-                <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect" checked />
-                <label for="singleSelect0" class="__select__label">Выберите контракт</label>
-
-                <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect" checked />
-                <label for="singleSelect0" class="__select__label">Test</label>
-
-                <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect" />
-                <label for="singleSelect1" class="__select__label">Easy</label>
+        <div class="block-overflow">
+          
+          <div class="create-contract">
+            <p class="create-contract__text">Укажите название товара и его разничную стоимость в магазинах, чтобы мы могли
+              покрыть часть расходов</p>
+  
+            <div class="select-box">
+              <div class="__select" data-state="">
+                <div class="__select__title" data-default="Option 0">Выберите контракт</div>
+                <div class="__select__content">
+                  <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect" checked />
+                  <label for="singleSelect0" class="__select__label">Выберите контракт</label>
+  
+                  <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect" checked />
+                  <label for="singleSelect0" class="__select__label">Test</label>
+  
+                  <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect" />
+                  <label for="singleSelect1" class="__select__label">Easy</label>
+                  
+                  <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect" />
+                  <label for="singleSelect3" class="__select__label">Medium</label>
+  
+                  <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect" />
+                  <label for="singleSelect4" class="__select__label">PRO</label>
+                </div>
+              </div>
+              
+              <input type="text" class="__input" placeholder="10 000 FLEX">
+            </div>
+  
+            <div class="information-block">
+              <div class="information-block__item">
+                <div class="information-block__left">
+                  <p>Период инвестирования</p>
+                  <div class="information-block__hr"></div>
+                </div>
                 
-                <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect" />
-                <label for="singleSelect3" class="__select__label">Medium</label>
-
-                <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect" />
-                <label for="singleSelect4" class="__select__label">PRO</label>
+                <div class="information-block__right">
+                  3 месяца
+                </div>
+                
+              </div> 
+  
+              <div class="information-block__item">
+                <div class="information-block__left">
+                  <p>Доходность</p>
+                  <div class="information-block__hr"></div>
+                </div>
+                
+                <div class="information-block__right">
+                  1.4%
+                </div>
+                
               </div>
+  
+              <div class="information-block__item">
+                <div class="information-block__left">
+                  <p>Начисление прибыли</p>
+                  <div class="information-block__hr"></div>
+                </div>
+                
+                <div class="information-block__right">
+                  Ежедневно
+                </div>
+                
+              </div>
+  
+              <div class="information-block__item dep">
+                <div class="information-block__left">
+                  <p>Ваш депозит</p>
+                </div>
+                
+                <div class="information-block__right">
+                  10 000 FLEX
+                </div>
+                
+              </div>
+  
             </div>
-            
-            <input type="text" class="__input" placeholder="10 000 FLEX">
-          </div>
-
-          <div class="information-block">
-            <div class="information-block__item">
-              <div class="information-block__left">
-                <p>Период инвестирования</p>
-                <div class="information-block__hr"></div>
-              </div>
+  
+            <button class="button create-contract__button">Создать контракт</button>
+  
+          </div> <!--create-contract-->
+  
+          <div>
+            <div class="title">Мои контракты</div>
+            <div class="table-box">
               
-              <div class="information-block__right">
-                3 месяца
-              </div>
-              
-            </div> 
-
-            <div class="information-block__item">
-              <div class="information-block__left">
-                <p>Доходность</p>
-                <div class="information-block__hr"></div>
-              </div>
-              
-              <div class="information-block__right">
-                1.4%
-              </div>
-              
-            </div>
-
-            <div class="information-block__item">
-              <div class="information-block__left">
-                <p>Начисление прибыли</p>
-                <div class="information-block__hr"></div>
-              </div>
-              
-              <div class="information-block__right">
-                Ежедневно
-              </div>
-              
-            </div>
-
-            <div class="information-block__item dep">
-              <div class="information-block__left">
-                <p>Ваш депозит</p>
-              </div>
-              
-              <div class="information-block__right">
-                10 000 FLEX
-              </div>
-              
-            </div>
-
-          </div>
-
-          <button class="button create-contract__button">Создать контракт</button>
-
-        </div> <!--create-contract-->
-
-        <div>
-          <div class="title">Мои контракты</div>
-          <div class="table-box">
-            
-            <div class="table-box__container">
-              <div class="table-box__item head">
-                <p>Название контракта</p>
-                <p>Депозит</p>
-                <p>Чистая прибыль</p>
-                <p>Доходность</p>
-                <p>Завершения контракта</p>
-              </div>
-              <div class="table-box__item">
-                <p>Easy</p>
-                <p>1 000 FLEX</p>
-                <p>720 FLEX</p>
-                <p>1.2 % в день</p>
-                <p>29.06.2021</p>
-              </div>
-              <div class="table-box__item">
-                <p>Pro</p>
-                <p>50 000 FLEX</p>
-                <p>96 000 FLEX</p>
-                <p>1.6 % в день</p>
-                <p>29.06.2021</p>
-              </div>
-              
-              <div class="table-box__item">
-                <p>Medium</p>
-                <p>10 000 FLEX</p>
-                <p>12 600 FLEX</p>
-                <p>1.4 % в день</p>
-                <p>29.06.2021</p>
+              <div class="table-box__container">
+                <div class="table-box__item head">
+                  <p>Название контракта</p>
+                  <p>Депозит</p>
+                  <p>Чистая прибыль</p>
+                  <p>Доходность</p>
+                  <p>Завершения контракта</p>
+                </div>
+                <div class="table-box__item">
+                  <p>Easy</p>
+                  <p>1 000 FLEX</p>
+                  <p>720 FLEX</p>
+                  <p>1.2 % в день</p>
+                  <p>29.06.2021</p>
+                </div>
+                <div class="table-box__item">
+                  <p>Pro</p>
+                  <p>50 000 FLEX</p>
+                  <p>96 000 FLEX</p>
+                  <p>1.6 % в день</p>
+                  <p>29.06.2021</p>
+                </div>
+                
+                <div class="table-box__item">
+                  <p>Medium</p>
+                  <p>10 000 FLEX</p>
+                  <p>12 600 FLEX</p>
+                  <p>1.4 % в день</p>
+                  <p>29.06.2021</p>
+                </div>
               </div>
             </div>
           </div>
+
         </div>
+
 
       </div>
 

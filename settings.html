@@ -212,130 +212,134 @@
 
       </div>
 
-      <div class="content-main house-content">
+      <div class="content-main">
         <h3 class="title">Настройки</h3>
 
-        <div class="setting">
-          <ul class="setting-header">
-            <li class="setting-header__tab active">Профиль</li>
-            <li class="setting-header__tab">Безопасность</li>
-            <li class="setting-header__tab">Уведомления</li>
+        <div class="block-overflow __padding">
 
-          </ul>
-
-          <div class="setting-tab active">
-            <div class="setting-tab__box">
-              <div class="setting-tab__item">
-
-                <div class="setting__user">
-                  <div class="setting__img">
-                    <img src="img/setting_user.jpg" alt="user">
+          <div class="setting __padding">
+            <ul class="setting-header">
+              <li class="setting-header__tab active">Профиль</li>
+              <li class="setting-header__tab">Безопасность</li>
+              <li class="setting-header__tab">Уведомления</li>
+  
+            </ul>
+  
+            <div class="setting-tab active">
+              <div class="setting-tab__box">
+                <div class="setting-tab__item">
+  
+                  <div class="setting__user">
+                    <div class="setting__img">
+                      <img src="img/setting_user.jpg" alt="user">
+                    </div>
+                    <a href="">Изменить фото</a>
                   </div>
-                  <a href="">Изменить фото</a>
+  
+                  <div class="setting-input">
+                    <div class="setting-input__item">
+                      <label for="name">Ваше имя</label>
+                      <input id="name" type="text" class="__input" placeholder="Константин">
+                    </div>
+                    <div class="setting-input__item">
+                      <label for="soname">Ваша фамилия</label>
+                      <input id="soname" type="text" class="__input" placeholder="Введите фамилию">
+                    </div>
+                    <div class="setting-input__item">
+                      <label for="date">Дата рождения </label>
+                      <input id="date" type="text" class="__input" placeholder="Введите дату">
+                    </div>
+                  </div>
+  
+                  <button class="button setting-tab__button">Сохранить</button>
                 </div>
-
-                <div class="setting-input">
+  
+                <div class="setting-tab__item">
                   <div class="setting-input__item">
-                    <label for="name">Ваше имя</label>
-                    <input id="name" type="text" class="__input" placeholder="Константин">
+                    <label for="ref">Ваша реферальная ссылка</label>
+                    <div class="setting-input__referal">
+                      <input id="ref" type="text" class="__input referal" placeholder="Id ref-334391-583">
+  
+                      <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" y="0.5" width="13" height="13" />
+                        <rect x="8.5" y="6.5" width="13" height="13" />
+                      </svg>
+                    </div>
+                    <a href="">Скопировать ссылку</a>
                   </div>
-                  <div class="setting-input__item">
-                    <label for="soname">Ваша фамилия</label>
-                    <input id="soname" type="text" class="__input" placeholder="Введите фамилию">
-                  </div>
-                  <div class="setting-input__item">
-                    <label for="date">Дата рождения </label>
-                    <input id="date" type="text" class="__input" placeholder="Введите дату">
+  
+                  <div class="setting-input__item __mob">
+                    <p class="setting-input__text">Пришлите эту ссылку человеку, которого хотите пригласить в свое
+                      партнерскую программу</p>
+  
+                    <div class="setting-input__referal">
+                      <input type="text" class="__input referal"
+                        placeholder="https://fintoflex.club/sign-up-Id ref-334391-583">
+  
+                      <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" y="0.5" width="13" height="13" />
+                        <rect x="8.5" y="6.5" width="13" height="13" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
-
+  
+  
+              </div>
+            </div>
+  
+            <div class="setting-tab active-none">
+              <div class="setting-tab__box __password">
+                <div class="setting-tab__item">
+  
+                  <div class="setting-input">
+                    <div class="setting-input__item">
+                      <label for="email">Электронная почта</label>
+                      <input id="email" type="email" class="__input" placeholder="konstantin@gmail.com">
+                    </div>
+                    <div class="setting-input__item">
+                      <label for="phone">Номер телефона</label>
+                      <input id="phone" type="text" class="__input" placeholder="+7 (___) ___-__-__">
+                    </div>
+                    <div class="setting-input__item">
+                      <label for="btc">BTC кошелек</label>
+                      <input id="btc" type="text" class="__input" placeholder="jofqw32o2fj92n3v9024iuqf0">
+                    </div>
+                    <div class="setting-input__item">
+                      <label for="usdt">USDT кошелек</label>
+                      <input id="usdt" type="text" class="__input" placeholder="jofqw32o2fj92n3v9024iuqf0">
+                    </div>
+                  </div>
+                  
+                </div>
+  
+                <div class="setting-tab__item">
+                  <p class="title setting-tab__title">Смена пароля</p>
+  
+                  <div class="setting-tab__password">
+                    <p class="setting-input__text">Для смены пароля мы пришлем письмом на ваш e-mail ссылку для
+                      подтверждения смены пароля.</p>
+    
+                    <input type="text" class="__input setting-tab__old" placeholder="Введите старый пароль">
+                    <input type="text" class="__input" placeholder="Введите новый пароль">
+                    <input type="text" class="__input" placeholder="Повторите новый пароль">
+  
+                  </div>
+                  
+                </div>
+  
                 <button class="button setting-tab__button">Сохранить</button>
               </div>
-
-              <div class="setting-tab__item">
-                <div class="setting-input__item">
-                  <label for="ref">Ваша реферальная ссылка</label>
-                  <div class="setting-input__referal">
-                    <input id="ref" type="text" class="__input referal" placeholder="Id ref-334391-583">
-
-                    <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="0.5" y="0.5" width="13" height="13" />
-                      <rect x="8.5" y="6.5" width="13" height="13" />
-                    </svg>
-                  </div>
-                  <a href="">Скопировать ссылку</a>
-                </div>
-
-                <div class="setting-input__item __mob">
-                  <p class="setting-input__text">Пришлите эту ссылку человеку, которого хотите пригласить в свое
-                    партнерскую программу</p>
-
-                  <div class="setting-input__referal">
-                    <input type="text" class="__input referal"
-                      placeholder="https://fintoflex.club/sign-up-Id ref-334391-583">
-
-                    <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="0.5" y="0.5" width="13" height="13" />
-                      <rect x="8.5" y="6.5" width="13" height="13" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-
-
             </div>
-          </div>
-
-          <div class="setting-tab active-none">
-            <div class="setting-tab__box __password">
-              <div class="setting-tab__item">
-
-                <div class="setting-input">
-                  <div class="setting-input__item">
-                    <label for="email">Электронная почта</label>
-                    <input id="email" type="email" class="__input" placeholder="konstantin@gmail.com">
-                  </div>
-                  <div class="setting-input__item">
-                    <label for="phone">Номер телефона</label>
-                    <input id="phone" type="text" class="__input" placeholder="+7 (___) ___-__-__">
-                  </div>
-                  <div class="setting-input__item">
-                    <label for="btc">BTC кошелек</label>
-                    <input id="btc" type="text" class="__input" placeholder="jofqw32o2fj92n3v9024iuqf0">
-                  </div>
-                  <div class="setting-input__item">
-                    <label for="usdt">USDT кошелек</label>
-                    <input id="usdt" type="text" class="__input" placeholder="jofqw32o2fj92n3v9024iuqf0">
-                  </div>
-                </div>
-                
-              </div>
-
-              <div class="setting-tab__item">
-                <p class="title setting-tab__title">Смена пароля</p>
-
-                <div class="setting-tab__password">
-                  <p class="setting-input__text">Для смены пароля мы пришлем письмом на ваш e-mail ссылку для
-                    подтверждения смены пароля.</p>
   
-                  <input type="text" class="__input setting-tab__old" placeholder="Введите старый пароль">
-                  <input type="text" class="__input" placeholder="Введите новый пароль">
-                  <input type="text" class="__input" placeholder="Повторите новый пароль">
-
-                </div>
-                
+            <div class="setting-tab active-none">
+              <div class="setting-tab__box">
+  
+                <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Решила, дорогу повстречался большой которое себя, пор всемогущая пустился лучше океана путь если моей выйти она запятой переписали предложения несколько залетают оксмокс дороге. Переписали, вдали силуэт. Деревни вопрос вопроса безопасную! Однажды, заголовок повстречался лучше запятых страну курсивных пустился свой гор коварный образ, дорогу злых от всех алфавит деревни путь его маленький не, дал за. Собрал грамматики, текст, переписали имеет бросил родного гор домах рукописи ему обеспечивает прямо однажды пунктуация свой маленькая семантика ты, жизни власти от всех моей там она! Текстов, грамматики ведущими толку которое возвращайся на берегу прямо, переулка маленькая ее образ лучше от всех? Правилами заглавных переписывается пунктуация на берегу рот безопасную океана алфавит журчит необходимыми вскоре, что ему рукописи образ путь буквоград продолжил последний ее оксмокс диких страну ручеек толку взобравшись собрал использовало! Раз ручеек жаренные ipsum подзаголовок до вопроса, о диких пустился жизни своих языкового встретил семантика! До о свою вдали большого! Рукопись даль парадигматическая грустный! Все точках страну встретил. На берегу вопрос дорогу рыбного выйти, путь лучше за точках то вопроса рукопись родного языкового большого безопасную правилами если всемогущая возвращайся домах образ города своих прямо. Скатился щеке вскоре лучше рукописи! Города предупредила маленький деревни грустный свое моей заглавных, рот ее страна о прямо языком, сих злых снова они напоивший коварных но коварный! Рот от всех рыбными приставка пунктуация текстами агентство текст парадигматическая большого составитель использовало запятой раз ведущими, переписали, языком коварный, но над до ты! Эта напоивший приставка власти до страну большой образ одна его инициал пор вопрос необходимыми выйти коварных пустился ipsum маленький всемогущая рыбного текст семантика коварный, буквенных текста предупреждал. Вдали которой города его не скатился вершину страна эта маленький щеке дороге, пунктуация они запятой, дорогу на берегу злых власти. Точках домах она подпоясал текстами которой языком залетают, послушавшись, грустный жаренные повстречался решила рыбными над. Выйти знаках алфавит щеке курсивных текстов.</p>
+  
               </div>
-
-              <button class="button setting-tab__button">Сохранить</button>
             </div>
-          </div>
-
-          <div class="setting-tab active-none">
-            <div class="setting-tab__box">
-
-              <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Решила, дорогу повстречался большой которое себя, пор всемогущая пустился лучше океана путь если моей выйти она запятой переписали предложения несколько залетают оксмокс дороге. Переписали, вдали силуэт. Деревни вопрос вопроса безопасную! Однажды, заголовок повстречался лучше запятых страну курсивных пустился свой гор коварный образ, дорогу злых от всех алфавит деревни путь его маленький не, дал за. Собрал грамматики, текст, переписали имеет бросил родного гор домах рукописи ему обеспечивает прямо однажды пунктуация свой маленькая семантика ты, жизни власти от всех моей там она! Текстов, грамматики ведущими толку которое возвращайся на берегу прямо, переулка маленькая ее образ лучше от всех? Правилами заглавных переписывается пунктуация на берегу рот безопасную океана алфавит журчит необходимыми вскоре, что ему рукописи образ путь буквоград продолжил последний ее оксмокс диких страну ручеек толку взобравшись собрал использовало! Раз ручеек жаренные ipsum подзаголовок до вопроса, о диких пустился жизни своих языкового встретил семантика! До о свою вдали большого! Рукопись даль парадигматическая грустный! Все точках страну встретил. На берегу вопрос дорогу рыбного выйти, путь лучше за точках то вопроса рукопись родного языкового большого безопасную правилами если всемогущая возвращайся домах образ города своих прямо. Скатился щеке вскоре лучше рукописи! Города предупредила маленький деревни грустный свое моей заглавных, рот ее страна о прямо языком, сих злых снова они напоивший коварных но коварный! Рот от всех рыбными приставка пунктуация текстами агентство текст парадигматическая большого составитель использовало запятой раз ведущими, переписали, языком коварный, но над до ты! Эта напоивший приставка власти до страну большой образ одна его инициал пор вопрос необходимыми выйти коварных пустился ipsum маленький всемогущая рыбного текст семантика коварный, буквенных текста предупреждал. Вдали которой города его не скатился вершину страна эта маленький щеке дороге, пунктуация они запятой, дорогу на берегу злых власти. Точках домах она подпоясал текстами которой языком залетают, послушавшись, грустный жаренные повстречался решила рыбными над. Выйти знаках алфавит щеке курсивных текстов.</p>
-
-            </div>
+  
           </div>
 
         </div>

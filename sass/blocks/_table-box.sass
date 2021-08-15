@@ -41,6 +41,7 @@
     display: flex
     justify-content: flex-end
     margin-top: 30px
+    margin-right: 40px
     &>div
       width: 232px
   &__total
@@ -62,6 +63,11 @@
       +pop7
   &__button
     width: 100%
+
+@media screen and ( max-width: 1200px )
+  .table-box
+    &__issue
+      margin-right: 10px
 
 @media screen and ( max-width: 576px )
   .table-box

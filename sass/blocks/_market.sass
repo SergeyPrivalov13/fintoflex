@@ -17,6 +17,7 @@
     height: 100%
     flex-wrap: nowrap
     flex-direction: column
+    //overflow: hidden
   &__content
     margin-top: -16px
     margin-bottom: 30px
@@ -83,6 +84,7 @@
       width: 100%
       max-width: 664px
       height: 100%
+      //overflow: hidden
       img
         position: absolute
         right: 0
@@ -207,6 +209,8 @@
         display: none
         &-mob
           display: block
+    &.__cashback
+      overflow: hidden
 
 @media screen and ( max-width: 992px )
   .market
@@ -266,6 +270,11 @@
       &.__cashback-mob
         left: 123px
     &__right
+      &.__cashback
+        img
+          width: 306px
+          height: 367px
+          right: -286px
       &.__house
         top: 0
         bottom: auto
@@ -276,18 +285,12 @@
           width: 326px
           height: 387px
           right: -356px
-@media screen and ( max-width: 576px )
-  .market
-    &__right
-      &.__cashback
-        img
-          width: 306px
-          height: 367px
-          right: -286px
+      
 @media screen and ( max-width: 440px )
   .market
     &__right
       &.__cashback
+        overflow: hidden
         img
           top: -10px
           width: 224px
@@ -297,3 +300,6 @@
       &.__cashback-mob
         bottom: 38px
         font-size: 24px
+        left: 100px
+    &.__cashback
+      overflow: auto

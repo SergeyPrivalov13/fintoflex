@@ -1,6 +1,6 @@
 .content
   width: 100%
-  padding-right: 68px
+  //padding-right: 68px
   overflow: hidden
   overflow-y: auto
   &.__auto
@@ -23,6 +23,7 @@
     justify-content: flex-end
     padding-bottom: 5px
     padding-top: 40px
+    padding-right: 68px
     //background: $gray-dark
     &::after
       content: ''
@@ -36,6 +37,7 @@
   &-main
     padding: 40px 50px
     padding-right: 0
+    padding-bottom: 0
     &__gains
       display: flex
       justify-content: space-between
@@ -122,7 +124,7 @@
 
 @media screen and ( max-width: 1400px )
   .content
-    padding-right: 36px
+    //padding-right: 36px
     &.__auto
       .content__header
         margin-right: 36px
@@ -131,7 +133,9 @@
 
 @media screen and ( max-width: 1200px )
   .content
-    padding-right: 26px
+    //padding-right: 26px
+    &__header
+      padding-right: 40px
     &.__auto
       .content__header
         margin-right: 26px
@@ -151,25 +155,34 @@
       display: flex
       justify-content: space-between
   .content
-    &__header
-      position: fixed
+    &__header      
+      //position: fixed
       width: 100%
       justify-content: space-between
       padding-bottom: 10px
+      padding-right: 0
       &::after
         display: none
+    &-main
+      padding-right: 0
+
+ 
 
 @media screen and ( max-width: 576px )
   .content
-    padding-right: 0 !important
+    position: relative
+    //padding-right: 0 !important
     &.__auto
       .content
         &-main
           padding-right: 0
     &-main
       padding: 20px 15px
-      padding-bottom: 50px
+      padding-right: 0
+      padding-bottom: 0
     &__header
-      padding-bottom: 8px
+      padding-bottom: 12px
   .exit
     margin-left: 16px
+  .bg .content__header
+    background: #292F39
