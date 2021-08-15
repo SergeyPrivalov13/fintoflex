@@ -197,6 +197,85 @@ ul li { list-style: none; }
   -webkit-scrollbar-width: 6px;
   -webkit-scrollbar-height: 6px; }
 
+.accordion__item { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.accordion__img { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 41px; height: 41px; margin-right: 24px; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 50%; border: 1px solid; }
+
+.accordion__img.pik { border-color: #D95CF9; -webkit-box-shadow: 0 0 4px #D95CF9; box-shadow: 0 0 4px #D95CF9; }
+
+.accordion__img.red { border-color: #FF4D5F; -webkit-box-shadow: 0 0 4px #FF4D5F; box-shadow: 0 0 4px #FF4D5F; }
+
+.accordion__img.ylw { border-color: #E9C716; -webkit-box-shadow: 0 0 4px #E9C716; box-shadow: 0 0 4px #E9C716; }
+
+.accordion__img.grn { border-color: #08E138; -webkit-box-shadow: 0 0 4px #08E138; box-shadow: 0 0 4px #08E138; }
+
+.accordion__img.birch { border-color: #5CF9F9; -webkit-box-shadow: 0 0 4px #5CF9F9; box-shadow: 0 0 4px #5CF9F9; }
+
+.accordion__img.orange { border-color: #F98B5C; -webkit-box-shadow: 0 0 4px #F98B5C; box-shadow: 0 0 4px #F98B5C; }
+
+.accordion__img img { width: 33px; height: 33px; -o-object-fit: cover; object-fit: cover; border-radius: 50%; overflow: hidden; }
+
+.accordion__item span { font-size: 18px; line-height: 18px; font-family: 'Montserrat Regular', sans-serif; }
+
+.cd-accordion-menu { width: 100%; }
+
+.cd-accordion-menu ul { /* by default hide all sub menus */ display: none; }
+
+.cd-accordion-menu li { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+
+.cd-accordion-menu input[type=checkbox] { /* hide native checkbox */ position: absolute; opacity: 0; }
+
+.cd-accordion-menu label, .cd-accordion-menu a { position: relative; display: block; padding: 18px 18px 18px 64px; background: #373D47; color: #ffffff; }
+
+.no-touch .cd-accordion-menu label:hover, .no-touch .cd-accordion-menu a:hover { background: #52565d; }
+
+.cd-accordion-menu label::before { /* icons */ content: ''; display: inline-block; width: 16px; height: 16px; position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+
+.cd-accordion-menu label { cursor: pointer; }
+
+.cd-accordion-menu label::before { background-image: url(../img/cd-icons.svg); background-repeat: no-repeat; }
+
+.cd-accordion-menu label::before { /* arrow icon */ left: 18px; background-position: 0 0; -webkit-transform: translateY(-50%) rotate(-90deg); transform: translateY(-50%) rotate(-90deg); }
+
+.cd-accordion-menu input[type=checkbox]:checked + label::before { /* rotate arrow */ -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+
+.cd-accordion-menu input[type=checkbox]:checked + label::after { /* show open folder icon if item is checked */ background-position: -32px 0; }
+
+.cd-accordion-menu input[type=checkbox]:checked + label + ul, .cd-accordion-menu input[type=checkbox]:checked + label:nth-of-type(n) + ul { /* use label:nth-of-type(n) to fix a bug on safari (<= 8.0.8) with multiple adjacent-sibling selectors*/ /* show children when item is checked */ display: block; }
+
+.cd-accordion-menu ul label, .cd-accordion-menu ul a { background: #373D47; padding-left: 74px; }
+
+.no-touch .cd-accordion-menu ul label:hover, .no-touch .cd-accordion-menu ul a:hover { background: #373D47; }
+
+.cd-accordion-menu > li:last-of-type > label, .cd-accordion-menu > li:last-of-type > a, .cd-accordion-menu > li > ul > li:last-of-type label, .cd-accordion-menu > li > ul > li:last-of-type a { -webkit-box-shadow: none; box-shadow: none; }
+
+.cd-accordion-menu ul label::before { left: 36px; }
+
+.cd-accordion-menu ul ul label, .cd-accordion-menu ul ul a { padding-left: 100px; }
+
+.cd-accordion-menu ul ul label::before { left: 54px; }
+
+.cd-accordion-menu ul ul ul label, .cd-accordion-menu ul ul ul a { padding-left: 118px; }
+
+.cd-accordion-menu ul ul ul label::before { left: 72px; }
+
+@media only screen and (min-width: 600px) { .cd-accordion-menu label, .cd-accordion-menu a { padding: 10px 24px 10px 28px; }
+  .cd-accordion-menu label::before { left: 0; }
+  .cd-accordion-menu ul label, .cd-accordion-menu ul a { padding-left: 62px; }
+  .cd-accordion-menu ul label::before { left: 36px; }
+  .cd-accordion-menu ul ul label, .cd-accordion-menu ul ul a { padding-left: 98px; }
+  .cd-accordion-menu ul ul label::before { left: 72px; }
+  .cd-accordion-menu ul ul ul label, .cd-accordion-menu ul ul ul a { padding-left: 132px; }
+  .cd-accordion-menu ul ul ul ul label, .cd-accordion-menu ul ul ul ul a { padding-left: 170px; }
+  .cd-accordion-menu ul ul ul ul ul label, .cd-accordion-menu ul ul ul ul ul a { padding-left: 206px; }
+  .cd-accordion-menu ul ul ul ul ul ul label, .cd-accordion-menu ul ul ul ul ul ul a { padding-left: 250px; }
+  .cd-accordion-menu ul ul ul label::before { left: 108px; }
+  .cd-accordion-menu ul ul ul ul label::before { left: 144px; }
+  .cd-accordion-menu ul ul ul ul ul label::before { left: 206px; }
+  .cd-accordion-menu ul ul ul ul ul label::before { left: 182px; } }
+
+.cd-accordion-menu.animated label::before { /* this class is used if you're using jquery to animate the accordion */ -webkit-transition: -webkit-transform 0.3s; transition: -webkit-transform 0.3s; transition: transform 0.3s; transition: transform 0.3s, -webkit-transform 0.3s; }
+
 .main-container { width: 100%; height: 100vh; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
 
 .saidbar { position: relative; max-width: 253px; width: 100%; height: 100vh; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; padding-left: 40px; padding-top: 53px; padding-bottom: 53px; padding-right: 20px; }
@@ -1819,4 +1898,24 @@ body.__white .market__content p:first-child { color: #15172E; }
   .dd-selected-text { font-size: 14px; }
   .dd-pointer { top: 18px; }
   .dd-option-text { font-size: 14px; } }
+
+.structure-modal { position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 100%; max-width: 769px; height: 559px; padding: 40px 32px; background: #373D47; border-radius: 18px; z-index: 100; }
+
+.structure-modal__header { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+
+.structure-modal__header p { margin: 0; margin-bottom: 20px; }
+
+.structure-modal__close svg { stroke: #ffffff; }
+
+.structure-modal__container { height: 430px; overflow: auto; }
+
+@media screen and (max-width: 992px) { .structure-modal { max-width: 95%; } }
+
+@media screen and (max-width: 600px) { .structure-modal { padding: 32px 16px; }
+  .accordion__item span { font-size: 12px; }
+  .accordion__img { margin-right: 12px; }
+  .cd-accordion-menu label::before { left: 0; }
+  .cd-accordion-menu label, .cd-accordion-menu a { padding-left: 26px; padding-top: 10px; padding-bottom: 10px; }
+  .cd-accordion-menu ul label::before { left: 26px; }
+  .cd-accordion-menu ul label, .cd-accordion-menu ul ul a { padding-left: 48px; } }
 /*# sourceMappingURL=style.css.map */

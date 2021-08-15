@@ -172,8 +172,10 @@
           <div id="bell" class="notification__block">
             <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M17.6667 7.8C17.6667 4.04446 14.6819 1 11 1C7.3181 1 4.33333 4.04446 4.33333 7.8C4.33333 15.7333 1 18 1 18H21C21 18 17.6667 15.7333 17.6667 7.8Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M13 22.0018C12.5864 22.6186 11.8244 22.9982 11 22.9982C10.1756 22.9982 9.41364 22.6186 9 22.0018" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                d="M17.6667 7.8C17.6667 4.04446 14.6819 1 11 1C7.3181 1 4.33333 4.04446 4.33333 7.8C4.33333 15.7333 1 18 1 18H21C21 18 17.6667 15.7333 17.6667 7.8Z"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M13 22.0018C12.5864 22.6186 11.8244 22.9982 11 22.9982C10.1756 22.9982 9.41364 22.6186 9 22.0018"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
 
             <span></span>
@@ -213,15 +215,364 @@
 
       </div>
       <div class="content-main">
-        
-        <h1>Твоя рабочая область</h1>
 
 
 
-      </div><!--content-main-->
-    </div><!--content-->
-  </div><!--main-container-->
 
+
+      </div>
+      <!--content-main-->
+    </div>
+    <!--content-->
+  </div>
+  <!--main-container-->
+
+
+  <div class="structure-modal">
+    <div class="structure-modal__header">
+      <p class="title">Моя структура</p>
+
+      <div class="structure-modal__close">
+        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L10 10.5L1 20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M20 20L10 10.5L20 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+      </div>
+    </div>
+
+    <div class="structure-modal__container">
+      <ul class="cd-accordion-menu animated">
+        <li class="has-children">
+          <input type="checkbox" name="group-1" id="group-1" checked>
+          <label for="group-1">
+            <div class="accordion__item">
+              <div class="accordion__img pik">
+                <img src="img/accordion/accord_1.jpg" alt="accord">
+              </div>
+              <span>Николай Ученов</span>
+            </div>
+          </label>
+
+          <ul>
+            <li class="has-children">
+              <input type="checkbox" name="sub-group-1-1" id="sub-group-1-1">
+              <label for="sub-group-1-1">
+                <div class="accordion__item">
+                  <div class="accordion__img red">
+                    <img src="img/accordion/accord_2.jpg" alt="accord">
+                  </div>
+                  <span>Алексей Прованс</span>
+                </div>
+              </label>
+
+              <ul>
+                <li>
+                  <a href="#0">
+                    <div class="accordion__item">
+                      <div class="accordion__img red">
+                        <img src="img/accordion/accord_2.jpg" alt="accord">
+                      </div>
+                      <span>Алексей Прованс</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#0">
+                    <div class="accordion__item">
+                      <div class="accordion__img red">
+                        <img src="img/accordion/accord_2.jpg" alt="accord">
+                      </div>
+                      <span>Алексей Прованс</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#0">
+                    <div class="accordion__item">
+                      <div class="accordion__img red">
+                        <img src="img/accordion/accord_2.jpg" alt="accord">
+                      </div>
+                      <span>Алексей Прованс</span>
+                    </div>
+                  </a>
+                </li>
+
+              </ul>
+            </li>
+            <li class="has-children">
+              <input type="checkbox" name="sub-group-1-2" id="sub-group-1-2">
+              <label for="sub-group-1-2">
+                <div class="accordion__item">
+                  <div class="accordion__img ylw">
+                    <img src="img/accordion/accord_3.jpg" alt="accord">
+                  </div>
+                  <span>Иван Кукуруза</span>
+                </div>
+              </label>
+
+              <ul>
+                <li class="has-children">
+                  <input type="checkbox" name="sub-group-level-1-2-1" id="sub-group-level-1-2-1">
+                  <label for="sub-group-level-1-2-1">
+                    <div class="accordion__item">
+                      <div class="accordion__img grn">
+                        <img src="img/accordion/accord_4.jpg" alt="accord">
+                      </div>
+                      <span>Александр Дмитриев</span>
+                    </div>
+                  </label>
+
+                  <ul>
+                    <li class="has-children">
+                      <input type="checkbox" name="sub-group-1-2-1-1" id="sub-group-1-2-1-1">
+                      <label for="sub-group-1-2-1-1">
+                        <div class="accordion__item">
+                          <div class="accordion__img red">
+                            <img src="img/accordion/accord_7.jpg" alt="accord">
+                          </div>
+                          <span>Ксения Дмитриевна</span>
+                        </div>
+                      </label>
+
+                      <ul>
+                        <li>
+                          <a href="#0">
+                            <div class="accordion__item">
+                              <div class="accordion__img red">
+                                <img src="img/accordion/accord_5.jpg" alt="accord">
+                              </div>
+                              <span>Артур Базаридзе</span>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0">
+                            <div class="accordion__item">
+                              <div class="accordion__img red">
+                                <img src="img/accordion/accord_2.jpg" alt="accord">
+                              </div>
+                              <span>Алексей Прованс</span>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0">
+                            <div class="accordion__item">
+                              <div class="accordion__img red">
+                                <img src="img/accordion/accord_2.jpg" alt="accord">
+                              </div>
+                              <span>Алексей Прованс</span>
+                            </div>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </li>
+                    <li class="has-children">
+                      <input type="checkbox" name="sub-group-1-2-1-2" id="sub-group-1-2-1-2">
+                      <label for="sub-group-1-2-1-2">
+                        <div class="accordion__item">
+                          <div class="accordion__img ylw">
+                            <img src="img/accordion/accord_3.jpg" alt="accord">
+                          </div>
+                          <span>Иван Кукуруза</span>
+                        </div>
+                      </label>
+
+                      <ul>
+                        <li class="has-children">
+                          <input type="checkbox" name="sub-group-level-1-2-1-2-1" id="sub-group-level-1-2-1-2-1">
+                          <label for="sub-group-level-1-2-1-2-1">
+                            <div class="accordion__item">
+                              <div class="accordion__img grn">
+                                <img src="img/accordion/accord_4.jpg" alt="accord">
+                              </div>
+                              <span>Александр Дмитриев</span>
+                            </div>
+                          </label>
+
+                          <ul>
+                            <li class="has-children">
+                              <input type="checkbox" name="sub-group-level-1-2-1-2-1-1"
+                                id="sub-group-level-1-2-1-2-1-1">
+                              <label for="sub-group-level-1-2-1-2-1-1">
+                                <div class="accordion__item">
+                                  <div class="accordion__img green">
+                                    <img src="img/accordion/accord_1.jpg" alt="accord">
+                                  </div>
+                                  <span>Александр Дмитриев</span>
+                                </div>
+                              </label>
+
+                              <ul>
+                                <li><a href="#0">
+                                    <div class="accordion__item">
+                                      <div class="accordion__img ylw">
+                                        <img src="img/accordion/accord_1.jpg" alt="accord">
+                                      </div>
+                                      <span>Александр Дмитриев</span>
+                                    </div>
+                                  </a></li>
+                                <li><a href="#0">
+                                    <div class="accordion__item">
+                                      <div class="accordion__img green">
+                                        <img src="img/accordion/accord_1.jpg" alt="accord">
+                                      </div>
+                                      <span>Александр Дмитриев</span>
+                                    </div>
+                                  </a></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li class="has-children">
+          <input type="checkbox" name="group-2" id="group-2">
+          <label for="group-2">
+            <div class="accordion__item">
+              <div class="accordion__img birch">
+                <img src="img/accordion/accord_6.jpg" alt="accord">
+              </div>
+              <span>Валерия Орехова</span>
+            </div>
+          </label>
+
+          <ul>
+            <li class="has-children">
+              <input type="checkbox" name="sub-group-11" id="sub-group-11">
+              <label for="sub-group-11">
+                <div class="accordion__item">
+                  <div class="accordion__img red">
+                    <img src="img/accordion/accord_2.jpg" alt="accord">
+                  </div>
+                  <span>Алексей Прованс</span>
+                </div>
+              </label>
+
+              <ul>
+                <li>
+                  <a href="#0">
+                    <div class="accordion__item">
+                      <div class="accordion__img red">
+                        <img src="img/accordion/accord_2.jpg" alt="accord">
+                      </div>
+                      <span>Алексей Прованс</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#0">
+                    <div class="accordion__item">
+                      <div class="accordion__img red">
+                        <img src="img/accordion/accord_2.jpg" alt="accord">
+                      </div>
+                      <span>Алексей Прованс</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#0">
+                    <div class="accordion__item">
+                      <div class="accordion__img red">
+                        <img src="img/accordion/accord_2.jpg" alt="accord">
+                      </div>
+                      <span>Алексей Прованс</span>
+                    </div>
+                  </a>
+                </li>
+
+              </ul>
+            </li>
+            <li class="has-children">
+              <input type="checkbox" name="sub-group-21" id="sub-group-21">
+              <label for="sub-group-21">
+                <div class="accordion__item">
+                  <div class="accordion__img ylw">
+                    <img src="img/accordion/accord_3.jpg" alt="accord">
+                  </div>
+                  <span>Иван Кукуруза</span>
+                </div>
+              </label>
+
+              <ul>
+                <li class="has-children">
+                  <input type="checkbox" name="sub-group-level-3" id="sub-group-level-3">
+                  <label for="sub-group-level-3">
+                    <div class="accordion__item">
+                      <div class="accordion__img grn">
+                        <img src="img/accordion/accord_4.jpg" alt="accord">
+                      </div>
+                      <span>Александр Дмитриев</span>
+                    </div>
+                  </label>
+
+                  <ul>
+                    <li><a href="#0">
+                        <div class="accordion__item">
+                          <div class="accordion__img birch">
+                            <img src="img/accordion/accord_6.jpg" alt="accord">
+                          </div>
+                          <span>Валерия Орехова</span>
+                        </div>
+                      </a></li>
+                    <li><a href="#0">
+                        <div class="accordion__item">
+                          <div class="accordion__img birch">
+                            <img src="img/accordion/accord_6.jpg" alt="accord">
+                          </div>
+                          <span>Валерия Орехова</span>
+                        </div>
+                      </a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li class="has-children">
+          <input type="checkbox" name="group-3" id="group-3">
+          <label for="group-3">
+            <div class="accordion__item">
+              <div class="accordion__img orange">
+                <img src="img/accordion/accord_7.jpg" alt="accord">
+              </div>
+              <span>Надежда Владимирова</span>
+            </div>
+          </label>
+
+          <ul>
+            <li><a href="#0"><div class="accordion__item">
+              <div class="accordion__img birch">
+                <img src="img/accordion/accord_6.jpg" alt="accord">
+              </div>
+              <span>Валерия Орехова</span>
+            </div></a></li>
+            <li><a href="#0"><div class="accordion__item">
+              <div class="accordion__img birch">
+                <img src="img/accordion/accord_6.jpg" alt="accord">
+              </div>
+              <span>Валерия Орехова</span>
+            </div></a></li>
+          </ul>
+        </li>
+
+
+
+      </ul> <!-- cd-accordion-menu -->
+    </div>
+
+
+  </div>
 
   <div class="bell__container">
     <div class="bell__message">
@@ -395,8 +746,11 @@
 
   </div>
 
+  <script src="js/jquery.min.js"></script>
+  <script src="js/accordion.js"></script>
 
   <script src="js/main.js"></script>
+
 
 </body>
 
