@@ -1641,11 +1641,15 @@ body.__white .setting-header__tab:hover { background: rgba(98, 120, 175, 0.3); }
 
 body.__white .setting-header__tab.active { background: #6278AF; color: #ffffff; }
 
+body.__white .structure { padding-right: 0; }
+
 body.__white .structure-info { background: #FAFAFA; -webkit-box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.04); box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.04); }
 
 body.__white .structure-info__name { color: #434343; }
 
 body.__white .structure-info__item p, body.__white .structure-info__item span { color: #434343; }
+
+body.__white .structure__box { margin-right: 30px; }
 
 body.__white .structure__main { background: #FAFAFA; -webkit-box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.04); box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.04); }
 
@@ -1734,6 +1738,10 @@ body.__white .structure-modal__container::-webkit-scrollbar { width: 4px; height
 body.__white .structure-modal__header .title { color: #ffffff; }
 
 body.__white .accordion-name, body.__white .accordion-partners { color: #ffffff; }
+
+body.__white .structure__container::-webkit-scrollbar { width: 8px; height: 8px; }
+
+@media screen and (max-width: 1800px) { .structure-box { margin-right: 0; } }
 
 @media screen and (max-width: 992px) { body.__white ::-webkit-scrollbar { width: 8px; height: 8px; } }
 
@@ -2130,7 +2138,7 @@ body.__white .accordion-name, body.__white .accordion-partners { color: #ffffff;
 
 .structure__item { position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin: 6px 0; }
 
-.structure__box { min-width: 1480px; margin-bottom: 32px; }
+.structure__box { min-width: 1480px; margin-bottom: 32px; margin-right: 0; }
 
 .structure__content { position: relative; z-index: 1; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
@@ -2244,7 +2252,8 @@ body.__white .accordion-name, body.__white .accordion-partners { color: #ffffff;
 
 .turnover { background: -webkit-gradient(linear, left top, left bottom, from(#E9B9E9), to(#FFFFFF)); background: linear-gradient(180deg, #E9B9E9 0%, #FFFFFF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-@media screen and (max-width: 1200px) { .structure { padding-right: 0; } }
+@media screen and (max-width: 1800px) { .partners { padding-right: 0; }
+  .structure { padding-right: 0; } }
 
 @media screen and (max-width: 992px) { .structure__show button { opacity: 1; -webkit-transform: translateX(0); transform: translateX(0); pointer-events: auto; } }
 /*# sourceMappingURL=style.css.map */

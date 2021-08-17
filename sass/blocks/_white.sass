@@ -398,6 +398,7 @@ body
             color: #ffffff
 
     .structure
+      padding-right: 0
       &-info
         background: #FAFAFA
         box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.04)
@@ -406,6 +407,8 @@ body
         &__item
           p, span
             color: #434343
+      &__box
+        margin-right: 30px
 
       &__main
         background: #FAFAFA
@@ -555,7 +558,18 @@ body
     .accordion
       &-name, &-partners
         color: $white
-        
+
+    .structure
+      &__container
+        &::-webkit-scrollbar
+          width: 8px
+          height: 8px
+
+@media screen and ( max-width: 1800px )
+  .structure
+    &-box
+      margin-right: 0
+  
 
 @media screen and ( max-width: 992px )
   body
