@@ -1729,6 +1729,12 @@ body.__white .finance-table__box { background: #FAFAFA; -webkit-box-shadow: 0px 
 
 body.__white .finance-table__error { color: #BABABA; }
 
+body.__white .structure-modal__container::-webkit-scrollbar { width: 4px; height: 4px; }
+
+body.__white .structure-modal__header .title { color: #ffffff; }
+
+body.__white .accordion-name, body.__white .accordion-partners { color: #ffffff; }
+
 @media screen and (max-width: 992px) { body.__white ::-webkit-scrollbar { width: 8px; height: 8px; } }
 
 @media screen and (max-width: 576px) { body.__white ::-webkit-scrollbar { width: 6px; height: 6px; }
@@ -2049,6 +2055,8 @@ body.__white .finance-table__error { color: #BABABA; }
 .structure-modal__close:hover { cursor: pointer; }
 
 .structure-modal__container { height: 430px; overflow: auto; }
+
+.structure-modal__container::-webkit-scrollbar { width: 4px; height: 4px; }
 
 @media screen and (max-width: 992px) { .structure-modal { max-width: 95%; } }
 
