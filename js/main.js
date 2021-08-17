@@ -128,28 +128,6 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
   };
   houseContent()
 
-  const addMarg = () => {
-    const saidAct = document.querySelector('.saidbar');
-
-    if (saidAct) {
-      const contentMain = document.querySelector('.content-main');
-      const contentHeader = document.querySelector('.content__header').clientHeight;
-
-
-      if (screenWidth < 992) {
-        saidAct.style.cssText = `
-          margin-top: ${contentHeader}px;
-        `;
-        contentMain.style.cssText = `
-          margin-top: ${contentHeader}px;
-          height: calc( 100% - ${contentHeader}px);
-          overflow-y: auto;
-        `
-      }
-    }
-  };
-  //addMarg()
-
   const select = () => {
     const selectBox = document.querySelector('.select-box');
     const selectSingle = document.querySelector('.__select');
@@ -181,23 +159,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
   select();
 
   // Расчёт высоты блока табов
-  const tabHeight = () => {
-    const heightWindow = window.innerHeight,
-      tabBlock = document.querySelectorAll('.box-overflow');
-
-    tabBlock.forEach((item) => {
-      let tabTop = item.offsetTop;
-      let blockHeight = heightWindow - tabTop;
-      item.style.cssText = `
-        max-height: ${blockHeight - 6}px;
-      `
-    })
-  };
-
-  if (screenW > 992) {
-    //tabHeight();
-  }
-
+ 
   const blockHeight = () => {
     const
       blockOverflow = document.querySelector('.block-overflow');
@@ -255,7 +217,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
     contract = document.querySelector('.contract');
 
   // Табы
-  const tabs = (blockClass, headerClass, containerClass, tabClass, contains, containerBox) => {
+  const tabs = (headerClass, containerClass, tabClass, contains, containerBox) => {
     const tabHeader = document.querySelector(headerClass),
       tabs = tabHeader.querySelectorAll(tabClass),
       heightWindow = window.innerHeight,
@@ -349,7 +311,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
   };
 
   if (contract) {
-    tabs('.contract', '.contract-header', '.contract-tab', '.contract-header__tab', 'contract-header__tab', '.contract-tab__box');
+    tabs('.contract-header', '.contract-tab', '.contract-header__tab', 'contract-header__tab', '.contract-tab__box');
   }
 
 
@@ -496,5 +458,75 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
     })
   };
   checkbox();
+
+  const showBlock = () => {
+    const structureItem = document.querySelectorAll('.structure__item');
+
+    structureItem.forEach((item) => {
+
+      if(screenW >= 993) {
+        item.addEventListener('mouseover', (e) => {
+          let target = e.target;        
+  
+          if(target.closest('.structure__img')) { 
+  
+            if(!item.classList.contains('active')){
+              structureItem.forEach((elem) => {
+                elem.classList.remove('active');
+              })
+              item.classList.add('active');
+            } else {
+            }
+          } else{
+          }
+        })
+        item.addEventListener('mouseout', (e) => {
+          let target = e.target;        
+  
+          if(target.closest('.structure__img')) { 
+  
+            if(!item.classList.contains('active')){
+              structureItem.forEach((elem) => {
+                elem.classList.remove('active');
+              })
+            } else {
+              item.classList.remove('active');
+            }
+          } else{
+            item.classList.remove('active');
+          }
+        })
+
+
+      } else {
+        item.addEventListener('click', (e) => {
+          let target = e.target;        
+  
+          if(target.closest('.structure__img')) { 
+  
+            if(!item.classList.contains('active')){
+              structureItem.forEach((elem) => {
+                elem.classList.remove('active');
+              })
+              item.classList.add('active');
+            } else {
+              item.classList.remove('active');
+            }
+          } else{
+            item.classList.remove('active');
+          }
+        })
+
+      }
+
+      
+
+
+
+
+    })
+  };
+
+  showBlock();
 
 });

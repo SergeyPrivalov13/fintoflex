@@ -1,0 +1,127 @@
+.partners
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  margin-bottom: 70px
+  padding-right: 40px
+  flex-wrap: wrap
+  &__item
+    &:first-child
+      width: 36%
+      
+    &:last-child
+      width: 54%
+  &__subtitle
+    margin-bottom: 30px
+  &__title
+    margin-bottom: 20px
+  &-referal
+    width: 68%
+    p
+      margin: 0
+      margin-bottom: 40px
+      font-size: 14px
+      line-height: 18px
+  &-box
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    margin-top: 60px    
+    padding: 30px
+    background: #373D47
+    border-radius: 18px
+    &__friend
+      span
+        display: block
+        margin: 0
+        margin-bottom: 15px
+        font-size: 14px
+        line-height: 17px
+        color: rgba(255, 255, 255, 0.66)
+        +mon7
+    &__info
+      display: flex
+      align-items: center
+    &__img
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 41px
+      height: 41px
+      margin-right: 24px
+      border: 1px solid
+      border-radius: 50%
+      &.grn
+        border-color: #16E9D1
+        filter: drop-shadow(0px 0px 4px rgba(255, 77, 95, 0.25))
+      img
+        width: 33px
+        height: 33px
+        border-radius: 50%
+        overflow: hidden
+    &__name
+      margin: 0
+      font-size: 14px
+      line-height: 17px
+      color: $white
+    &__left
+      margin-right: 50px
+      .finance-user
+        margin-bottom: 35px
+    &__right
+      width: 60%
+
+@media screen and ( max-width: 1600px )
+  .partners
+    &-box
+      flex-wrap: wrap
+      &__left, &__right
+        width: 100%
+      &__left
+        margin-bottom: 30px
+        margin-right: 0
+    &__item
+      &:first-child
+        width: 48%
+      &:last-child
+        width: 48%
+    &-referal
+      width: 80%
+
+@media screen and ( max-width: 1200px )
+  .partners
+    &__item
+      &:first-child
+        width: 80%
+      &:last-child
+        width: 80%
+
+@media screen and ( max-width: 992px )
+  .partners
+    padding-right: 0
+    &__item
+      &:first-child
+        width: 80%
+      &:last-child
+        width: 100%
+
+@media screen and ( max-width: 768px )
+  .partners
+    &__item
+      &:first-child
+        width: 90%
+
+@media screen and ( max-width: 768px )
+  .partners
+    &__item
+      &:first-child
+        width: 100%
+    &-referal
+      width: 100%
+      p
+        margin-bottom: 30px
+    &-box
+      margin-top: 34px
+      padding: 20px
+
+

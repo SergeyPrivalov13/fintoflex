@@ -1,6 +1,6 @@
 body
   &.__white
-    background: #E5E5E5
+    background: #f7f8fa
     &.bg
       .content__header
         transition: .4s
@@ -21,7 +21,7 @@ body
       border: 2px solid rgba(56, 62, 73, 0.07)
 
     .content__header
-      background: #E5E5E5
+      background: #f7f8fa
     .title
       color: #3E3E3E
     .menu
@@ -197,7 +197,7 @@ body
 
     .bell
       &__container
-        background: #e5e5e5
+        background: #f7f8fa
       &__text
         p, span
           color: #15172E
@@ -222,6 +222,10 @@ body
       &__ok
         svg
           fill: #6278AF
+        &.__stroke
+          svg
+            fill: none
+            stroke: #6278AF
       &__text
         color: #434343
       &__info
@@ -269,9 +273,10 @@ body
           .information
             &-block
               &__right
-                background: linear-gradient(180deg, #8569F9 0%, #B7A7FC 100%)
-                -webkit-background-clip: text
-                -webkit-text-fill-color: transparent
+                color: #774BFF
+                background: none
+    .history
+      color: #434343
 
     .__input
       color: #15172E
@@ -347,12 +352,15 @@ body
     .contarct
       &__item
         background: #FAFAFA
+        box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.06)
       &__box
         &::-webkit-scrollbar
           width: 6px
           height: 6px
       &__title
-        color: #8569F9
+        background: linear-gradient(180deg, #8569F9 0%, #B7A7FC 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
         &.__pink
           background: linear-gradient(180deg, #8569F9 0%, #B7A7FC 100%)
           -webkit-background-clip: text
@@ -373,6 +381,167 @@ body
         p
           &:first-child
             color: #15172E
+
+    .setting
+      &-input
+        &__item
+          label, a
+            color: #434343
+      &-header
+        &__tab
+          background: #DDE7FF
+          color: #434343
+          &:hover
+            background: rgba(#6278AF, 0.3)
+          &.active
+            background: #6278AF
+            color: #ffffff
+
+    .structure
+      &-info
+        background: #FAFAFA
+        box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.04)
+        &__name
+          color: #434343
+        &__item
+          p, span
+            color: #434343
+
+      &__main
+        background: #FAFAFA
+        box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.04)
+        .structure
+          &__item
+            &::before
+              opacity: 0.4
+            &::after
+              width: 100%
+              background: linear-gradient(90deg, rgba(232, 232, 232, 0.12) 0%, rgba(196, 196, 196, 0) 78.12%)
+          &__content
+            p
+              color: #434343
+              +mon5
+              &.platinum
+                color: #BF56D9
+              &.bronze
+                color: #FF697A
+              &.emerald
+                color: #1DBDAB
+              &.gold
+                color: #E8E089
+              &.turnover
+                background: linear-gradient(180deg, #E9B9E9 0%, #7A007A 100%)
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+      &__show
+        button
+          border: 1px solid #343943
+          background: #FAFAFA
+          color: #434343
+          &::after
+            background: url('../img/svg/icon_arrow_white.svg') no-repeat
+            background-size: contain
+      &__header
+        .structure
+          &__item
+            p
+              color: #434343
+
+    .partners
+      &-box
+        background: #FAFAFA
+        box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.04)
+        &__friend
+          span
+            color: #434343
+
+    .cashback
+      &-load
+        background: #FAFAFA
+        box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.04)
+        svg
+          fill: #6278AF
+          fill-opacity: 0.8
+      &-history
+        background: #FAFAFA
+        box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.04)
+        &__box
+          &::-webkit-scrollbar
+            width: 8px
+        &__item
+          &::after
+            opacity: 0.3
+        &__left
+          a, p, span
+            color: #434343
+        &__right
+          color: #434343
+      &__item
+        background: #FAFAFA
+        box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.04)
+        span
+          color: #1B1B1B
+        p
+          background: linear-gradient(180deg, #CDCDCD 0%, #272727 100%)
+          -webkit-background-clip: text
+          -webkit-text-fill-color: transparen
+
+    .active-contracts
+      &__item
+        background: #fafafa
+        box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.04)
+        &.contract-tab__item, &.active-products__item
+          background: #f3f7ff
+          box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.04)
+
+      &__percent
+        background: linear-gradient(180deg, #8569F9 0%, #B7A7FC 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        +mon7
+      &__easy
+        background: linear-gradient(180deg, #8569F9 0%, #B7A7FC 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+
+    .contract
+      &-header
+        &__tab
+          color: rgba(67, 67, 67, 0.65)
+          &::after
+            background: rgba(67, 67, 67, 0.65)
+          &.active
+            color: #434343
+            &::after
+              background: #434343
+
+    .finance
+      &-header
+        &_tab
+          background: #DDE7FF
+          color: #434343
+          &:hover
+            background: rgba(#6278AF, 0.3)
+          &.active
+            background: #6278AF
+            color: $white
+      &-table
+        &__item
+          &::after
+            height: 1px
+            opacity: 0.3
+          &.__title
+            p
+              color: #434343
+          p
+            color: #434343
+            &:nth-child(3)
+              color: #434343
+        &__box
+          background: #FAFAFA
+          box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.04)
+        &__error
+          color: #BABABA
 
 @media screen and ( max-width: 992px )
   body

@@ -16,19 +16,21 @@
     align-items: center
     margin-bottom: 25px
     &__img
+      position: relative
       margin-right: 28px
-      width: 61px
-      height: 61px
+      width: 60px
+      height: 60px
+      border-radius: 50%
       border: 1px solid #D95CF9
       box-sizing: border-box
-      display: flex
-      align-items: center
-      justify-content: center
-      border-radius: 50%
-      overflow: hidden
       img
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
         width: 49px
         height: 49px
+        flex: 0 0 auto
         border-radius: 50%
         overflow: hidden
         object-fit: cover
@@ -119,6 +121,8 @@
         padding-bottom: 12px
         padding-top: 4px
         width: 1450px
+        &::after
+          display: none
         p
           margin: 0
           margin-right: 10px
@@ -204,3 +208,9 @@
       width: 100%
     &-content
       flex-wrap: wrap
+
+@media screen and ( max-width: 420px )
+  .finance
+    &-user
+      &__img
+        margin-right: 20px
